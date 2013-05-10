@@ -83,6 +83,11 @@ nav li a {
 	color: #FFF;
 }
 
+p a {
+	color: black;
+	text-decoration: none;
+}
+
 /** example on slide 2-1 **/
 .info :before {
 	display: block;
