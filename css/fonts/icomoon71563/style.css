@@ -1,0 +1,306 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-code, .icon-file-xml, .icon-file-css, .icon-css3, .icon-office, .icon-newspaper, .icon-pencil, .icon-file, .icon-file-2, .icon-file-3, .icon-file-4, .icon-copy, .icon-copy-2, .icon-copy-3, .icon-paste, .icon-stack, .icon-screen, .icon-mobile, .icon-laptop, .icon-tablet, .icon-mobile-2, .icon-tv, .icon-link, .icon-attachment, .icon-eye, .icon-eye-blocked, .icon-eye-2, .icon-grin, .icon-wink, .icon-warning, .icon-notification, .icon-question, .icon-info, .icon-drawer, .icon-wordpress, .icon-embed, .icon-console, .icon-share, .icon-html5, .icon-html5-2, .icon-firefox, .icon-chrome, .icon-opera, .icon-safari, .icon-IE, .icon-bug, .icon-pie, .icon-remove, .icon-settings, .icon-dashboard, .icon-meter, .icon-rocket, .icon-fire, .icon-cloud-upload, .icon-cloud-download, .icon-tree, .icon-numbered-list, .icon-list, .icon-map, .icon-download, .icon-upload, .icon-box-remove, .icon-box-add, .icon-drawer-2, .icon-location, .icon-location-2, .icon-phone-hang-up, .icon-coin, .icon-print, .icon-qrcode, .icon-podcast, .icon-feed, .icon-database, .icon-github, .icon-github-2, .icon-github-3, .icon-twitter, .icon-twitter-2, .icon-download-2, .icon-upload-2, .icon-cloud, .icon-layers, .icon-layers-alt, .icon-earth, .icon-folder, .icon-folder-open, .icon-checkmark, .icon-checkmark-2, .icon-close {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-code:before {
+	content: "\e000";
+}
+.icon-file-xml:before {
+	content: "\e001";
+}
+.icon-file-css:before {
+	content: "\e002";
+}
+.icon-css3:before {
+	content: "\e003";
+}
+.icon-office:before {
+	content: "\e004";
+}
+.icon-newspaper:before {
+	content: "\e005";
+}
+.icon-pencil:before {
+	content: "\e006";
+}
+.icon-file:before {
+	content: "\e007";
+}
+.icon-file-2:before {
+	content: "\e008";
+}
+.icon-file-3:before {
+	content: "\e009";
+}
+.icon-file-4:before {
+	content: "\e00a";
+}
+.icon-copy:before {
+	content: "\e00b";
+}
+.icon-copy-2:before {
+	content: "\e00c";
+}
+.icon-copy-3:before {
+	content: "\e00d";
+}
+.icon-paste:before {
+	content: "\e00e";
+}
+.icon-stack:before {
+	content: "\e00f";
+}
+.icon-screen:before {
+	content: "\e010";
+}
+.icon-mobile:before {
+	content: "\e011";
+}
+.icon-laptop:before {
+	content: "\e012";
+}
+.icon-tablet:before {
+	content: "\e013";
+}
+.icon-mobile-2:before {
+	content: "\e014";
+}
+.icon-tv:before {
+	content: "\e015";
+}
+.icon-link:before {
+	content: "\e016";
+}
+.icon-attachment:before {
+	content: "\e017";
+}
+.icon-eye:before {
+	content: "\e018";
+}
+.icon-eye-blocked:before {
+	content: "\e019";
+}
+.icon-eye-2:before {
+	content: "\e01a";
+}
+.icon-grin:before {
+	content: "\e01b";
+}
+.icon-wink:before {
+	content: "\e01c";
+}
+.icon-warning:before {
+	content: "\e01d";
+}
+.icon-notification:before {
+	content: "\e01e";
+}
+.icon-question:before {
+	content: "\e01f";
+}
+.icon-info:before {
+	content: "\e020";
+}
+.icon-drawer:before {
+	content: "\e021";
+}
+.icon-wordpress:before {
+	content: "\e022";
+}
+.icon-embed:before {
+	content: "\e023";
+}
+.icon-console:before {
+	content: "\e024";
+}
+.icon-share:before {
+	content: "\e025";
+}
+.icon-html5:before {
+	content: "\e026";
+}
+.icon-html5-2:before {
+	content: "\e027";
+}
+.icon-firefox:before {
+	content: "\e028";
+}
+.icon-chrome:before {
+	content: "\e029";
+}
+.icon-opera:before {
+	content: "\e02a";
+}
+.icon-safari:before {
+	content: "\e02b";
+}
+.icon-IE:before {
+	content: "\e02c";
+}
+.icon-bug:before {
+	content: "\e02d";
+}
+.icon-pie:before {
+	content: "\e02e";
+}
+.icon-remove:before {
+	content: "\e02f";
+}
+.icon-settings:before {
+	content: "\e030";
+}
+.icon-dashboard:before {
+	content: "\e031";
+}
+.icon-meter:before {
+	content: "\e032";
+}
+.icon-rocket:before {
+	content: "\e033";
+}
+.icon-fire:before {
+	content: "\e034";
+}
+.icon-cloud-upload:before {
+	content: "\e035";
+}
+.icon-cloud-download:before {
+	content: "\e036";
+}
+.icon-tree:before {
+	content: "\e037";
+}
+.icon-numbered-list:before {
+	content: "\e038";
+}
+.icon-list:before {
+	content: "\e039";
+}
+.icon-map:before {
+	content: "\e03a";
+}
+.icon-download:before {
+	content: "\e03b";
+}
+.icon-upload:before {
+	content: "\e03c";
+}
+.icon-box-remove:before {
+	content: "\e03d";
+}
+.icon-box-add:before {
+	content: "\e03e";
+}
+.icon-drawer-2:before {
+	content: "\e03f";
+}
+.icon-location:before {
+	content: "\e040";
+}
+.icon-location-2:before {
+	content: "\e041";
+}
+.icon-phone-hang-up:before {
+	content: "\e042";
+}
+.icon-coin:before {
+	content: "\e043";
+}
+.icon-print:before {
+	content: "\e044";
+}
+.icon-qrcode:before {
+	content: "\e045";
+}
+.icon-podcast:before {
+	content: "\e046";
+}
+.icon-feed:before {
+	content: "\e047";
+}
+.icon-database:before {
+	content: "\e048";
+}
+.icon-github:before {
+	content: "\e049";
+}
+.icon-github-2:before {
+	content: "\e04a";
+}
+.icon-github-3:before {
+	content: "\e04b";
+}
+.icon-twitter:before {
+	content: "\e04c";
+}
+.icon-twitter-2:before {
+	content: "\e04d";
+}
+.icon-download-2:before {
+	content: "\e04e";
+}
+.icon-upload-2:before {
+	content: "\e04f";
+}
+.icon-cloud:before {
+	content: "\e050";
+}
+.icon-layers:before {
+	content: "\e051";
+}
+.icon-layers-alt:before {
+	content: "\e052";
+}
+.icon-earth:before {
+	content: "\e053";
+}
+.icon-folder:before {
+	content: "\e054";
+}
+.icon-folder-open:before {
+	content: "\e055";
+}
+.icon-checkmark:before {
+	content: "\e056";
+}
+.icon-checkmark-2:before {
+	content: "\e057";
+}
+.icon-close:before {
+	content: "\e058";
+}

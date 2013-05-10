@@ -1,0 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,300,400italic,700);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {height: 100%;}
+body {
+	background: #E2E0E1;
+	color: #3C4552;
+}
+
+#slider { height: 100% !important;}
+
+.rsSlide {
+	padding-top: 30px;
+	display: table;
+	width: 100%;
+}
+
+.rsContent {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+h1 {
+	font: 700 3.5em/1em Lato, arial, verdana, sans-serif;
+	max-width:70%;
+	margin:  0 auto;
+}
+
+p {
+	font: 300 1.5em/1.8em Lato, arial, verdana, sans-serif;
+	max-width:70%;
+	margin:  30px auto;
+}
+
+[class*="icon-"] {display: block; margin-bottom: 50px;}
+.big[class*="icon-"]:before {font-size:7em;}
+.rsContent > [class*="icon-"]:before {
+	background: #3C4552;
+	border-radius: 10px;
+	padding: 20px;
+	color: #FFF;
+}
+
+.info :before {
+	display: block;
+	font-size: 3em;
+}
+
+.info [class*="icon-"] {display: inline-block;}
+
+.middleEqual {
+	font-size: 3em;
+	display: inline-block;
+	padding: 20px;
+}
