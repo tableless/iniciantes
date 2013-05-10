@@ -34,11 +34,42 @@ h1 {
 	max-width:70%;
 	margin:  0 auto;
 }
+h2 {
+	font: 400 1.8em/0.8em Lato, arial, verdana, sans-serif;
+}
 
 p {
 	font: 300 1.3em/1.8em Lato, arial, verdana, sans-serif;
 	max-width:70%;
 	margin:  30px auto;
+}
+
+li {
+	font: 300 1.3em/1.8em Lato, arial, verdana, sans-serif;
+
+}
+
+nav {
+	border: 1px solid rgba(0,0,0,0.3);
+	background: #FFF;
+	width: 300px;
+	margin: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+nav h2 {
+	background: rgba(0,0,0,0.8);
+	padding: 20px;
+	color:#FFF;
+}
+nav li {list-style: none;}
+nav li a {
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	text-align: center;
+	color: rgba(0,0,0,0.8);
 }
 
 /** ICONES **/
