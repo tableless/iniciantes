@@ -32,6 +32,7 @@ body {
 h1 {
 	font: 700 3em/1em Lato, arial, verdana, sans-serif;
 	max-width:70%;
+	position: relative !important;
 	margin:  0 auto;
 }
 h2 {
@@ -73,7 +74,7 @@ nav li a {
 }
 
 /** ICONES **/
-[class*="icon-"] {display: block; margin-bottom: 50px;}
+[class*="icon-"] {display: block; margin-bottom: 50px; position: relative !important;}
 .big[class*="icon-"]:before {font-size:5em;}
 .rsContent > [class*="icon-"]:before {
 	background: #3C4552;
@@ -114,4 +115,8 @@ nav li a {
 
 .rsMinW .rsArrowLeft {
 	right: 70px;
+}
+
+@media screen and (max-width:500px) {
+	body {font-size:70%;}
 }
