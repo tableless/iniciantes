@@ -24,35 +24,38 @@ body {
 }
 
 h1 {
-	font: 700 3.5em/1em Lato, arial, verdana, sans-serif;
+	font: 700 3em/1em Lato, arial, verdana, sans-serif;
 	max-width:70%;
 	margin:  0 auto;
 }
 
 p {
-	font: 300 1.5em/1.8em Lato, arial, verdana, sans-serif;
+	font: 300 1.3em/1.8em Lato, arial, verdana, sans-serif;
 	max-width:70%;
 	margin:  30px auto;
 }
 
+/** ICONES **/
 [class*="icon-"] {display: block; margin-bottom: 50px;}
-.big[class*="icon-"]:before {font-size:7em;}
+.big[class*="icon-"]:before {font-size:5em;}
 .rsContent > [class*="icon-"]:before {
 	background: #3C4552;
 	border-radius: 10px;
-	padding: 20px;
+	padding: 30px;
 	color: #FFF;
 }
 
+/** example on slide 2-1 **/
 .info :before {
 	display: block;
 	font-size: 3em;
 }
 
-.info [class*="icon-"] {display: inline-block;}
+.info [class*="icon-"] {display: inline-block; margin-left: 25px;}
 
 .middleEqual {
 	font-size: 3em;
 	display: inline-block;
-	padding: 20px;
+	padding: 0 20px;
+	vertical-align: top;
 }
