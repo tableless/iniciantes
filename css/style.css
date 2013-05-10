@@ -1,5 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,400italic,700);
 
+.logo-tableles {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -58,4 +64,23 @@ p {
 	display: inline-block;
 	padding: 0 20px;
 	vertical-align: top;
+}
+
+.rsMinW .rsBullets {
+	right: 135px; 
+	background: gray;
+	padding: 5px;
+	border-radius: 5px;
+	bottom: 40px;
+}
+.rsMinW .rsArrow {
+	bottom: 30px;
+	background: gray;
+	border-radius: 10px;
+	padding: 0;
+	width: 50px;
+}
+
+.rsMinW .rsArrowLeft {
+	right: 70px;
 }
