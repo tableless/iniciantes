@@ -5,7 +5,7 @@
 
   // Map all keys for navigating slides.
   var keys = {
-      forward: [39, 75]
+      forward: [39, 75, 32]
     , backward: [37, 74]
   };
 
