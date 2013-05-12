@@ -1,0 +1,25 @@
+@import "variables";
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+
+.gallery {
+	position: relative;
+	height: 100%;
+	
+  .item { height: 100%; overflow: hidden; text-align: center; display: table; vertical-align: middle;}
+	.controls { position: absolute; bottom: 10%; width: 100%; text-align: center; }
+
+	.control-button {
+		display: inline-block; margin: 0 .02em;
+		font-size: 3em; 
+		
+		@extend %inactive-button;
+		
+		text-align: center; text-decoration: none;
+		transition: color .1s;
+
+		&:hover { @extend %active-button; }
+	}
+}
