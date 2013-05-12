@@ -15,6 +15,7 @@ html, body {
   display: table-cell;
   vertical-align: middle;
 }
+
 article:after {
   content: "";
   clear: both;
@@ -45,11 +46,8 @@ article h1:before {
   display: block;
   background-color: #E73D31; 
   color: #FFF;
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-  line-height: 100px;
-  font-size: 70px !important;
+  padding: 35px;
+  font-size: 2em;
 }
 article h2 {
   margin: 0 0 30px;
@@ -71,7 +69,7 @@ article nav {
   width: 300px;
   margin: 20px;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 article nav ul, article nav ol {
   padding: 0;
@@ -82,6 +80,7 @@ article nav h2 {
   padding: 10px;
   margin: 0;
   color:#FFF;
+  font-size: 1.5em;
 }
 article nav li {list-style: none;}
 article nav li a {
@@ -91,8 +90,13 @@ article nav li a {
   padding: 10px;
   text-align: center;
   color: rgba(0,0,0,0.8);
+  font-size: 0.9em;
 }
+article nav li:last-child a {border-bottom: 0;}
 
+article nav li a:hover {
+  background: rgba(0,0,0,0.1);
+}
 .info {
   margin-top: 35px;
 }
@@ -115,3 +119,41 @@ article nav li a {
   padding: 0 20px;
   vertical-align: top;
 }
+
+
+
+@media screen and (max-width: 780px) {
+  body {
+    font-size: 70%;
+  }
+
+.gallery .controls {
+    position: static;
+    height: auto;
+  }
+
+article {padding: 25px;}
+  
+.gallery .item {
+  display: block;
+}
+
+
+article h1:before {
+    top: -25px;
+    margin-left: -25px;
+    padding: 15px;
+    font-size: 1em;
+  }
+  .lnk-fork {
+    display: none;
+  }
+
+  .logo-tableles {
+    float: left;
+    position: static;
+  }
+
+}
+
+
