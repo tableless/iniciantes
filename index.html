@@ -3,29 +3,93 @@
 <head>
 	<title>Para iniciantes</title>
 	<meta charset="utf-8">
-	<link href="css/royalslider.css" rel="stylesheet">
-    <link href="css/minimal-white/rs-minimal-white.css" rel="stylesheet">
     <link href="css/functional-classes.css" rel="stylesheet">
-	<link href="css/fonts/icomoon71563/style.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet">
+    <link href="css/gallery.theme.css" rel="stylesheet">
+    <link href="css/fonts/style.css" rel="stylesheet">
 </head>
 <body>
 
-<div id="slider" class="heroSlider rsMinW">
+  <div class="gallery items-4">
+    <div id="no-autoplay-1" class="control-operator"></div>
+    <div id="no-autoplay-2" class="control-operator"></div>
+    <div id="no-autoplay-3" class="control-operator"></div>
+    <div id="no-autoplay-4" class="control-operator"></div>
 
-	<div class="rsContent txtCenter slide1">
-		<i class="icon-code big"></i>
-		<h1>O que é desenvolvimento <br>front-end?</h1>
-		<p>Um guia para aqueles que estão entrando na área de front-end.</p>
-		<p>A ideia é que você, que está começando, tenha o mínimo de informação e saiba por onde começar.</p>
+    <figure class="item">
+      <div class="limit">
+      	<article>
+		    <h1 class="icon-code">O que é desenvolvimento front-end?</h1>
+		    <h2>Um guia para iniciantes na área</h2>
+			<p class="txtCenter">A ideia é que você, que está começando, tenha o mínimo de informação e saiba por onde começar.</p>
+		</article>
+      </div>
+    </figure>
+
+    <figure class="item">
+      <div class="limit">
+      	<article>
+		    <h1 class="icon-earth">O que é o W3C?</h1>
+			<p><a href="http://www.w3.org/">W3C</a> (World Wide Web Consortium) é uma organização sem fins lucrativos criado pelo Tim Berners-Lee (esse cara criou a web!). Diversas empresas como Microsoft, Google, Yahoo!, Samsung, Nokia e <a href="http://www.w3.org/Consortium/Member/List" title="veja a lista de membros">uma pancada de outras</a>, investem dinheiro no W3C para que ele pesquise e desenvolva novas tecnologias para web.</p>
+			<p>O W3C é quem regulamenta e cria padrões de codificação para internet. Se não tiver ninguém para criar, testar, ter novas ideias e etc, isso tudo vira bagunça, por isso o W3C faz esse papel.
+			</p>
+		</article>
+      </div>
+    </figure>
+
+    <figure class="item">
+      <div class="limit">
+      	<article>
+		    <h1 class="icon-code">Nomenclatura</h1>
+			<p>Quando codificamos algum site ou serviço para internet, nos referimos a dois tipos de linguagem: a linguagem back-end e a front-end. O dev <strong>back-end</strong> (ou server-side), é o responsável em programar as funcionalidades do site/serviço escrevendo código em linguagens como <strong>PHP, Ruby, Python, Java, etc</strong>. </p><p>O dev <strong>front-end</strong> (ou client-side) é responsável por implementar o design do layout usando códigos de <strong>HTML, CSS e Javascript</strong>.</p>
+		</article>
+      </div>
+    </figure>
+
+    <figure class="item">
+      <div class="limit">
+      	<article>
+		    <h1 class="icon-code">Nomenclatura</h1>
+			<p>Por exemplo: se criarmos um script em linguagem back-end (php, asp, java, ruby etc) que apenas calcula a soma de 2 + 2, será o SERVIDOR (ou back, o server) que calculará este resultado. Se fizermos esse cálculo em alguma linguagem front-end, como o Javascript, quem calcula essa conta é o BROWSER do usuário. Por isso o termo <strong>client</strong> ou <strong>front</strong>.</p>
+		
+		<div class="info">
+			<span class="icon-layers">
+				Cálculo no Servidor
+			</span>
+			<span class="middleEqual">=</span>
+			<span class="icon-console">
+				Back-end ou Server-side
+			</span>
+		</div>
+		<br>
+		<div class="info">
+			<span class="icon-laptop">
+				Cálculo no Browser
+			</span>
+			<span class="middleEqual">=</span>
+			<span class="icon-code">
+				Client-side ou Front-end
+			</span>
+		</div>
+		</article>
+      </div>
+    </figure>
+
+    <div class="controls">
+      <a href="#no-autoplay-1" class="control-button">•</a>
+      <a href="#no-autoplay-2" class="control-button">•</a>
+      <a href="#no-autoplay-3" class="control-button">•</a>
+      <a href="#no-autoplay-4" class="control-button">•</a>
     </div>
-	<div class="rsContent txtCenter slide1-1">
-		<i class="icon-earth big"></i>
-		<h1>O que é o W3C?</h1>
-		<p><a href="http://www.w3.org/">W3C</a> (World Wide Web Consortium) é uma organização sem fins lucrativos criado pelo Tim Berners-Lee (esse cara criou a web!). Diversas empresas como Microsoft, Google, Yahoo!, Samsung, Nokia e <a href="http://www.w3.org/Consortium/Member/List" title="veja a lista de membros">uma pancada de outras</a>, investem dinheiro no W3C para que ele pesquise e desenvolva novas tecnologias para web.</p>
-		<p>O W3C é quem regulamenta e cria padrões de codificação para internet. Se não tiver ninguém para criar, testar, ter novas ideias e etc, isso tudo vira bagunça, por isso o W3C faz esse papel.
-		</p>
-    </div>
+  </div>
+
+
+
+
+<!-- 
+<div id="slider" class="heroSlider rsMinW">
 
 	<div class="rsContent txtCenter slide2">
 		<i class="icon-code big"></i>
@@ -144,13 +208,11 @@
 			<a href="http://google.com/+tableless">+tableless</a><br>
 		</p>
     </div>
-</div>
+</div> -->
 
 <a href="http://tableless.com.br/" class="logo-tableles" title="Tableless - Tentando ajudar a todos"><img src="img/logo-tableless.png"></a>
 
 <script  src="js/jquery-1.8.0.min.js"></script>
-<script src="js/jquery.royalslider.min.js"></script>
-<script src="js/scripts.js"></script>
 
 <a href="https://github.com/tableless/iniciantes"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 </body>
