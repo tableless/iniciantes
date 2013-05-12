@@ -28,6 +28,10 @@ article {
   padding: 50px;
 }
 
+article a {
+  color: #bf3605;
+}
+
 article h1 {
   margin: 0 0 30px;
   padding: 45px 0 0;
@@ -44,7 +48,7 @@ article h1:before {
   left: 50%;
   margin-left: -72px;
   display: block;
-  background-color: #E73D31; 
+  background-color: #E73D31;
   color: #FFF;
   padding: 35px;
   font-size: 2em;
@@ -107,7 +111,7 @@ article nav li a:hover {
 }
 
 .info [class*="icon-"] {
-  display: inline-block; 
+  display: inline-block;
   margin-left: 25px;
   color: #333;
 }
@@ -133,7 +137,7 @@ article nav li a:hover {
   }
 
 article {padding: 25px;}
-  
+
 .gallery .item {
   display: block;
 }
