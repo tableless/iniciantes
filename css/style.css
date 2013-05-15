@@ -164,4 +164,6 @@ article h1:before {
 
 }
 
-
+@media screen and (max-width: 480px) {
+  .info [class*="icon-"] { width: 30%; margin-left: 0; }
+}
