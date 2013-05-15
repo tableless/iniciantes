@@ -80,4 +80,15 @@
       backward();
     }
   }, false);
+
+  window.addEventListener("load", function(event) {
+    var $pre = document.querySelectorAll('pre'),
+      i = $pre.length;
+
+    while(i--){
+     $pre[i].className += ' prettyprint linenums';
+    }
+    prettyPrint();
+  });
+
 })();

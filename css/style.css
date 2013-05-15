@@ -123,6 +123,11 @@ article nav li a:hover {
   padding: 0 20px;
   vertical-align: top;
 }
+.gallery .item pre {
+  text-align: left;
+}
+ol.linenums { padding-left: 0; }
+
 
 
 
@@ -142,7 +147,6 @@ article {padding: 25px;}
   display: block;
 }
 
-
 article h1:before {
     top: -25px;
     margin-left: -25px;
@@ -160,4 +164,6 @@ article h1:before {
 
 }
 
-
+@media screen and (max-width: 480px) {
+  .info [class*="icon-"] { width: 30%; margin-left: 0; }
+}

@@ -13,6 +13,7 @@
     <link href="css/gallery/gallery.build.css" rel="stylesheet">
     <link href="css/gallery/gallery.theme.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
 </head>
 <body>
 
@@ -116,7 +117,7 @@
 			<article>
 				<h1 class="icon-html5">HTML</h1>
 		<p>O HTML é uma linguagem de marcação. Isso quer dizer que você marca com tags as informações da página. Por exemplo, se eu quiser criar um texto em negrito, eu escrevo algo assim:</p>
-		<p>&lt;strong&gt;<strong>texto em negrito</strong>&lt;/strong&gt;</p>
+		<pre class="html">&lt;strong&gt;texto em negrito&lt;/strong&gt;</pre>
 		<p>Para saber mais sobre o que é HTML, visite o link: <a href="http://tableless.com.br/o-que-html-basico/">O que é HTML e para que serve?</a></p>
 			</article>
 		</div>
@@ -127,18 +128,18 @@
 			<article>
 				<h1 class="icon-css3">CSS</h1>
 				<p>O CSS é uma linguagem de formatação. Ele é responsável por deixar as coisas mais bonitas, com o visual exatamente igual ao layout criado pelo designer. Sua sintaxe é muito simples:</p>
-				<div class="txtLeft" style="width: 500px; margin: 0 auto;">
-					<p class="fLeft" style="margin-right: 100px">
-						<strong>seletor</strong> {<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;propriedade: valor;
-						<br>}
-					</p>
-					<p class="fLeft">
-						<strong>div</strong> {<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;background: white;
-						<br>}
-					</p>
-				</div>
+
+<pre class="css txtLeft fLeft" style="width: 270px;">
+seletor {
+    propriedade: valor;
+}
+</pre>
+<pre class="css txtLeft fRight" style="width: 270px;">
+div {
+    background: white;
+}
+</pre>
+				<div class="cBoth"></div>
 			</article>
 		</div>
 	</figure>
@@ -227,6 +228,7 @@
 <a href="https://github.com/tableless/iniciantes" class="lnk-fork"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
 <script src="js/script.js"></script>
+<script src="js/prettify.js"></script>
 
 <script type="text/javascript">
 
