@@ -123,6 +123,11 @@ article nav li a:hover {
   padding: 0 20px;
   vertical-align: top;
 }
+.gallery .item pre {
+  text-align: left;
+}
+ol.linenums { padding-left: 0; }
+
 
 
 
@@ -141,7 +146,6 @@ article {padding: 25px;}
 .gallery .item {
   display: block;
 }
-
 
 article h1:before {
     top: -25px;
