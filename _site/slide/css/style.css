@@ -1,0 +1,163 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,300italic,400italic);
+
+.logo-tableles {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+html, body {
+  height: 100%;
+  background: #E5E5E5;
+}
+
+.limit {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+article:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+article {
+  background: #FFF;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+article a {
+  color: #bf3605;
+}
+
+article h1 {
+  margin: 0 0 30px;
+  padding: 45px 0 0;
+  font: 100 2em "Lato", helvetica, arial, tahoma, sans-serif;
+  font-weight: 100 !important;
+  color: #E73D31;
+  position: relative;
+  text-transform: uppercase !important;
+}
+
+article h1:before {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  margin-left: -72px;
+  display: block;
+  background-color: #E73D31;
+  color: #FFF;
+  padding: 35px;
+  font-size: 2em;
+}
+article h2 {
+  margin: 0 0 30px;
+  font: 300 2em "Lato", helvetica, arial, tahoma, sans-serif;
+  font-weight: 300 !important;
+  color: #666;
+  position: relative;
+}
+
+article p {
+  font: 0.9em/1.7em helvetica, arial, tahoma, sans-serif;
+  color: #666;
+  text-align: left;
+}
+
+article nav {
+  border: 1px solid rgba(0,0,0,0.3);
+  background: #FFF;
+  width: 300px;
+  margin: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+article nav ul, article nav ol {
+  padding: 0;
+  margin: 0;
+}
+article nav h2 {
+  background: rgba(0,0,0,0.8);
+  padding: 10px;
+  margin: 0;
+  color:#FFF;
+  font-size: 1.5em;
+}
+article nav li {list-style: none;}
+article nav li a {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: rgba(0,0,0,0.8);
+  font-size: 0.9em;
+}
+article nav li:last-child a {border-bottom: 0;}
+
+article nav li a:hover {
+  background: rgba(0,0,0,0.1);
+}
+.info {
+  margin-top: 35px;
+}
+
+.info :before {
+  display: block;
+  font-size: 3em;
+}
+
+.info [class*="icon-"] {
+  display: inline-block;
+  margin-left: 25px;
+  color: #333;
+}
+
+.middleEqual {
+  color: #333;
+  font-size: 3em;
+  display: inline-block;
+  padding: 0 20px;
+  vertical-align: top;
+}
+
+
+
+@media screen and (max-width: 780px) {
+  body {
+    font-size: 70%;
+  }
+
+.gallery .controls {
+    position: static;
+    height: auto;
+  }
+
+article {padding: 25px;}
+
+.gallery .item {
+  display: block;
+}
+
+
+article h1:before {
+    top: -25px;
+    margin-left: -25px;
+    padding: 15px;
+    font-size: 1em;
+  }
+  .lnk-fork {
+    display: none;
+  }
+
+  .logo-tableles {
+    float: left;
+    position: static;
+  }
+
+}
+
+
