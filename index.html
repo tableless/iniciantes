@@ -1,252 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+	<meta name="viewport" content="width=device-width">
+	<meta charset="UTF-8">
 	<title>Para iniciantes</title>
-	<meta charset="utf-8">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Informações básicas sobre desenvolvimento front-end para iniciantes.">
-
-		<link href="css/normalize.css" rel="stylesheet">
-		<link href="css/functional-classes.css" rel="stylesheet">
-		<link href="css/fonts/style.css" rel="stylesheet">
-		<link href="css/gallery/gallery.build.css" rel="stylesheet">
-		<link href="css/gallery/gallery.theme.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+ 
 <body>
 
-<div class="gallery items-11">
-	<div id="item-1" class="control-operator"></div>
-	<div id="item-2" class="control-operator"></div>
-	<div id="item-3" class="control-operator"></div>
-	<div id="item-4" class="control-operator"></div>
-	<div id="item-5" class="control-operator"></div>
-	<div id="item-6" class="control-operator"></div>
-	<div id="item-7" class="control-operator"></div>
-	<div id="item-8" class="control-operator"></div>
-	<div id="item-9" class="control-operator"></div>
-	<div id="item-10" class="control-operator"></div>
-	<div id="item-11" class="control-operator"></div>
+<header>
+	<div class="limit">
+		<h1>Getting Started</h1>
+		<h2>Um guia para iniciantes na área de web.</h2>
+	</div>
+</header>
 
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-code">O que é desenvolvimento front-end?</h1>
-				<h2>Um guia para iniciantes na área</h2>
-				<p class="txtCenter">A ideia é que você, que está começando, tenha o mínimo de informação e saiba por onde começar.</p>
-			</article>
-		</div>
-	</figure>
-
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-earth">O que é o W3C?</h1>
-				<p><a href="http://www.w3.org/">W3C</a> (World Wide Web Consortium) é uma organização sem fins lucrativos criado pelo Tim Berners-Lee (esse cara criou a web!). Diversas empresas como Microsoft, Google, Yahoo!, Samsung, Nokia e <a href="http://www.w3.org/Consortium/Member/List" title="veja a lista de membros">uma pancada de outras</a>, investem dinheiro no W3C para que ele pesquise e desenvolva novas tecnologias para web.</p>
-				<p>O W3C é quem regulamenta e cria padrões de codificação para internet. Se não tiver ninguém para criar, testar, ter novas ideias e etc, isso tudo vira bagunça, por isso o W3C faz esse papel.
-				</p>
-			</article>
-		</div>
-	</figure>
-
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-code">O termo front-end / client-side</h1>
-				<p>Quando codificamos algum site ou serviço para internet, nos referimos a dois tipos de linguagem: a linguagem back-end e a front-end. O dev <strong>back-end</strong> (ou server-side), é o responsável em programar as funcionalidades do site/serviço escrevendo código em linguagens como <strong>PHP</strong>, <strong>Ruby</strong>, <strong>Python</strong>, <strong>Java</strong>, <strong>etc</strong>.</p>
-				<p>O dev <strong>front-end</strong> (ou client-side) é responsável por implementar o design do layout usando códigos de <strong>HTML, CSS e Javascript</strong>.</p>
-			</article>
-		</div>
-	</figure>
-
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-code">O termo front-end / client-side</h1>
-				<p>Por exemplo: se criarmos um script em linguagem back-end (PHP, Asp, Java, Ruby, etc) que apenas calcula a soma de 2 + 2, será o SERVIDOR (ou back, o server) que calculará este resultado. Se fizermos esse cálculo em alguma linguagem front-end, como o Javascript, quem calculará essa conta é o BROWSER do usuário. Por isso o termo <strong>client</strong> ou <strong>front</strong>.</p>
-
-				<div class="info">
-					<span class="icon-layers">
-						Cálculo no Servidor
-					</span>
-					<span class="middleEqual">=</span>
-					<span class="icon-console">
-						Back-end ou Server-side
-					</span>
-				</div>
-				<br>
-				<div class="info">
-					<span class="icon-laptop">
-						Cálculo no Browser
-					</span>
-					<span class="middleEqual">=</span>
-					<span class="icon-code">
-						Client-side ou Front-end
-					</span>
-				</div>
-			</article>
-		</div>
-	</figure>
-
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-stack">Desenvolvimento em Camadas</h1>
-				<p class="txtCenter">O desenvolvimento front-end é dividido em 3 camadas independentes:</p>
-				<div class="info">
-					<span class="icon-html5">
-						<p class="txtCenter">Informação <br><strong>HTML</strong></p>
-					</span>
-					<span class="icon-css3">
-						<p class="txtCenter">Formatação <br><strong>CSS</strong></p>
-					</span>
-					<span class="icon-rocket">
-						<p class="txtCenter">Comportamento <br><strong>JS</strong></p>
-					</span>
-				</div>
-				<p class="cBoth txtCenter">
-					Leia <a href="http://tableless.com.br/camadas-de-desenvolvimento-client-side/">mais sobre desenvolvimento em camadas aqui</a>.
-				</p>
-			</article>
-		</div>
-	</figure>
-
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-html5">HTML</h1>
-		<p>O HTML é uma linguagem de marcação. Isso quer dizer que você marca com tags as informações da página. Por exemplo, se eu quiser criar um texto em negrito, eu escrevo algo assim:</p>
-		<p>&lt;strong&gt;<strong>texto em negrito</strong>&lt;/strong&gt;</p>
-		<p>Para saber mais sobre o que é HTML, visite o link: <a href="http://tableless.com.br/o-que-html-basico/">O que é HTML e para que serve?</a></p>
-			</article>
-		</div>
-	</figure>
-
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-css3">CSS</h1>
-				<p>O CSS é uma linguagem de formatação. Ele é responsável por deixar as coisas mais bonitas, com o visual exatamente igual ao layout criado pelo designer. Sua sintaxe é muito simples:</p>
-				<div class="txtLeft" style="width: 500px; margin: 0 auto;">
-					<p class="fLeft" style="margin-right: 100px">
-						<strong>seletor</strong> {<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;propriedade: valor;
-						<br>}
-					</p>
-					<p class="fLeft">
-						<strong>div</strong> {<br>
-							&nbsp;&nbsp;&nbsp;&nbsp;background: white;
-						<br>}
-					</p>
-				</div>
-			</article>
-		</div>
-	</figure>
-
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-rocket">Javascript</h1>
-				<p>Javascript é uma linguagem de programação front-end, que manipula o CSS e o HTML para que você possa executar comportamentos específicos, como animações, mudanças de valores, inserção de conteúdo e outras tarefas. O Javascript então cuida do comportamento do seu site.</p>
-				<p>Existem muitos frameworks que facilitam o trabalho com Javascript, abstraindo o código original por um código mais simples. O <a href="http://jquery.com/">jQuery</a> é um desses frameworks. Ele é o mais utilizado pelo mundo. Por conta da sua facilidade e por causa da sua compatibilidade entre todos os browsers.</p>
-				<p>Mas lembre-se: aprenda pelo menos o básico do JAVASCRIPT antes de aprender qualquer Framework. Só assim você entenderá de fato o código gerado e como os frameworks funcionam.</p>
-			</article>
-		</div>
-	</figure>
-
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-file-xml">Editores de código</h1>
-				<p>Para iniciar, você precisa escolher um editor de código. Para iniciantes, o mais indicado é o Sublime Text. Esse editor também é usado por desenvolvedores experientes por causa da sua simplicidade.<br> <a href="http://www.sublimetext.com/">Baixe o Sublime Text aqui.</a></p>
-				<p>Geralmente há um preconceito contra editores como o Dreamweaver, os chamados WYSIWYG (What You See Is What You Get) por que com o passar do tempo, o desenvolvedor não aprende realmente o HTML e o CSS, utilizando o editor como uma muleta, aprendendo apenas como a ferramenta e não o código propriamente dito.</p>
-			</article>
-		</div>
-	</figure>
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-question">Onde aprender?</h1>
-				<p>Existem vários sites e cursos brasileiros para aprender a desenvolver para web, mas lembre-se, saber inglês é fundamental para o seu aprendizado. Alguns deles:</p>
-				<nav>
-					<h2>Websites e Comunidade</h2>
-					<ul>
-						<li><a href="http://tableless.com.br/">Tableless</a></li>
-						<li><a href="http://www.pinceladasdaweb.com.br/blog/">Pinceladas na Web</a></li>
-						<li><a href="http://loopinfinito.com.br/">Loop Infinito</a></li>
-						<li><a href="http://maujor.com/">Site do Maujor</a></li>
-						<li><a href="http://simplesideias.com.br/">Simples ideias</a></li>
-						<li><a href="http://imasters.com.br/">iMasters</a></li>
-						<li><a href="http://andrecomws.com/lab/code-standards/">Andrecomws - Padrões de código</a></li>
-						<li><a href="http://braziljs.org/">BrazilJS</a></li>
-					</ul>
-				</nav>
-				<nav>
-					<h2>Cursos livres</h2>
-					<ul>
-						<li><a href="http://campus.tableless.com.br/">Campus Online do Tableless</a></li>
-						<li><a href="http://tableless.com.br/servicos/aula-particular.php">Aula Particular do Tableless</a></li>
-						<li><a href="http://howtocode.com.br/">HowTo</a></li>
-						<li><a href="http://www.caelum.com.br/">Caelum</a></li>
-					</ul>
-				</nav>
-				<nav>
-					<h2>Tutoriais (em inglês)</h2>
-					<ul>
-						<li><a href="http://www.codecademy.com/">Codecademy - Aprenda a programar interativamente</a></li>
-						<li><a href="https://developer.mozilla.org/pt-PT/learn/">Mozilla - Aprenda a fazer sites</a></li>
-						<li><a href="http://http://www.html5rocks.com/en/tutorials/">HTML5 Rocks - Posts & Tutorials</a></li>
-						<li><a href="http://http://movethewebforward.org//">Move the web forward</a></li>	
-					</ul>
-				</nav>
-			</article>
-		</div>
-	</figure>
-
-	<figure class="item">
-		<div class="limit">
-			<article>
-				<h1 class="icon-grin">Obrigado!</h1>
-				<p>Esperamos que tenha aprendido a base do desenvolvimento front-end!<br> Agora é mãos à obra!</p>
-				<p>
-					<a href="http://twitter.com/tableless">@tableless</a><br>
-					<a href="http://facebook.com/tablelessbr">facebook/tablelessbr</a><br>
-					<a href="http://google.com/+tableless">+tableless</a><br>
-				</p>
-			</article>
-		</div>
-	</figure>
-
-	<div class="controls">
-		<a href="#item-1" class="control-button">•</a>
-		<a href="#item-2" class="control-button">•</a>
-		<a href="#item-3" class="control-button">•</a>
-		<a href="#item-4" class="control-button">•</a>
-		<a href="#item-5" class="control-button">•</a>
-		<a href="#item-6" class="control-button">•</a>
-		<a href="#item-7" class="control-button">•</a>
-		<a href="#item-8" class="control-button">•</a>
-		<a href="#item-9" class="control-button">•</a>
-		<a href="#item-10" class="control-button">•</a>
-		<a href="#item-11" class="control-button">•</a>
+<div class="content limit nobg">
+	<div class="box concept-box">
+		<h1>Comece aqui</h1>
+		<p>Informações básicas e importantíssimas para você não se perder no caminho.</p>
+		<a href="#" class="btn">Continue lendo</a>
+	</div>
+	<div class="box html-box">
+		<h1>O que é HTML?</h1>
+		<p>HTML é a linguagem predominante em todos os websites. Saiba como funciona e quais as suas principais tags.</p>
+		<a href="#" class="btn">Continue lendo</a>
+	</div>
+	<div class="box css-box">
+		<h1>O que é CSS?</h1>
+		<p>Entenda como funciona a linguagem visual que formata o layout de sites.</p>
+		<a href="#" class="btn">Continue lendo</a>
+	</div>
+	<div class="box js-box">
+		<h1>O que é Javascript?</h1>
+		<p>Como funciona o Javascript, linguagem usada para controlar elementos e muito mais.</p>
+		<a href="#" class="btn">Continue lendo</a>
 	</div>
 </div>
 
-<a href="http://tableless.com.br/" class="logo-tableles" title="Tableless - Tentando ajudar a todos"><img src="img/logo-tableless.png"></a>
-
-<a href="https://github.com/tableless/iniciantes" class="lnk-fork"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
-
-<script src="js/script.js"></script>
+<article class="content limit">
+	<h1>Sobre este guia</h1>
+	<p>Este guia foi criado pela comunidade brasileira de desenvolvimento web para ajudar iniciantes da área que queiram encontrar conteúdo básico de qualidade e assim ingressar na área  com mais confiança e bagagem. Aproveite e divulgue quando possível!</p>
+</article>
 
 <script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-335027-1']);
-	_gaq.push(['_setDomainName', 'tableless.com.br']);
-	var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-	_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-	_gaq.push(['_trackPageview']);
-</script>
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-335027-1']);
+  _gaq.push(['_setDomainName', 'tableless.com.br']);
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>
