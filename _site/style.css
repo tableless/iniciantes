@@ -19,6 +19,7 @@ header	{
 	color: #FFF;
 	position: relative;
 }
+
 header .limit {position: relative; overflow: hidden;}
 header h1 a {color: #FFF; text-decoration: none;}
 header h1 {
@@ -248,4 +249,13 @@ article h2 {
 #questions:target {
 	opacity: 1;
 	top: 121px;
+}
+
+
+.lnk-fork {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+	z-index: 1;
 }
