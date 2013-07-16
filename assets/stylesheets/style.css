@@ -142,6 +142,7 @@ header h2 {
 	padding: 0 0 30px;
 	position: relative;
 	top: -70px;
+	clear: both;
 }
 article.content {overflow: hidden;}
 .nobg {background: none; box-shadow: none;}
@@ -156,6 +157,7 @@ article.content {overflow: hidden;}
 	vertical-align: top;
 	box-shadow: 0 0 7px 0px rgba(0,0,0,0.2);
 	background: #FFF;
+	float: left;
 }
 
 .box:nth-child(even) {margin-right: 0;}
