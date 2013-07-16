@@ -117,32 +117,6 @@ header h2 {
 	display: block;
 }
 
-.navside ul {position: absolute; top: -1000px}
-
-.navside:target ul {
-	position: relative;
-	top: 0;
-}
-
-.navside h3:before {
-	display: inline-block;
-	content: " ";
-	position: absolute;
-	right: 15px;
-	top: 20px;
-	width: 10px;
-	height: 5px;
-	background: url(../img/arrow-menu.png) no-repeat center;
-	background-size: 100%;
-	-webkit-transform: rotate(-90deg);
-}
-
-.navside:target h3:before {
-	background: url(../img/arrow-menu.png) no-repeat center;
-	-webkit-transform: rotate(0deg);
-}
-
-
 .navside li {list-style: none;}
 
 .navside li a {
