@@ -105,16 +105,45 @@ header h2 {
 
 .navside h3 {
 	text-transform: uppercase;
-	font-size:0.8em;
+	font-size: 0.8em;
 	cursor: default;
-	padding: 15px 20px;
 	background: rgba(0,0,0,0.13);
 	border-bottom: 1px solid rgba(0,0,0,0.07);
 }
-
-.navside li {
-	list-style: none;
+.navside h3 a {
+	color: #000;
+	text-decoration: none;
+	padding: 15px 20px;
+	display: block;
 }
+
+.navside ul {position: absolute; top: -1000px}
+
+.navside:target ul {
+	position: relative;
+	top: 0;
+}
+
+.navside h3:before {
+	display: inline-block;
+	content: " ";
+	position: absolute;
+	right: 15px;
+	top: 20px;
+	width: 10px;
+	height: 5px;
+	background: url(../img/arrow-menu.png) no-repeat center;
+	background-size: 100%;
+	-webkit-transform: rotate(-90deg);
+}
+
+.navside:target h3:before {
+	background: url(../img/arrow-menu.png) no-repeat center;
+	-webkit-transform: rotate(0deg);
+}
+
+
+.navside li {list-style: none;}
 
 .navside li a {
 	display: block;
@@ -250,7 +279,6 @@ article h2 {
 	opacity: 1;
 	top: 121px;
 }
-
 
 .lnk-fork {
 	position: absolute;
