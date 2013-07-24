@@ -1,11 +1,11 @@
-/* ------------------------------------- 
-		GLOBAL 
+/* -------------------------------------
+		GLOBAL
 ------------------------------------- */
-* { 
+* {
 	margin:0;
 	padding:0;
 }
-body { 
+body {
 	font-family: 'Lato', "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 	font-size: 100%;
 	background-color: #e1e1e1;
@@ -214,6 +214,11 @@ article h2 {
 	padding-bottom: 20px;
 }
 
+article h3 {
+	font-weight: 300;
+	padding-bottom: 15px;
+}
+
 .box p,
 article p {
 	font-weight: 500;
@@ -230,11 +235,25 @@ article p {
 	font-weight: 300;
 }
 
+.box li,
+article li {
+	line-height: 23px;
+	font-weight: 500;
+	font-size: 0.9em;
+	color: rgba(0,0,0,0.7);
+}
+
 article p,
 article h1,
-article h2 {
+article h2,
+article h3,
+article li {
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+article ul {
+	margin-bottom: 20px;
 }
 
 #questions {
