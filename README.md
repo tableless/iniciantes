@@ -9,7 +9,7 @@ Guia básico para iniciantes
 Se você quiser ajudar a melhorar este guia, escrevendo, corrigindo ou aprimorando a experiência de utilização, por favor, faça um FORK do projeto e mãos à obra.
 
 Como funciona
-==========
+----------
 Utilizamos [Jekyll](http://jekyllrb.com) uma Gem do [Ruby](http://www.ruby-lang.org/) para gerar páginas estáticas.
 
 1. Instale o [Ruby](http://www.ruby-lang.org/pt/downloads/) 
