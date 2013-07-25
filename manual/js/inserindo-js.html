@@ -7,6 +7,42 @@ title: Inserindo JS na página?
 <article class="content">
 	<h1>Inserindo JS na página?</h1>
 	<h2>Como relacionar um arquivo Javascript no seu HTML?</h2>
-	<p>A ideia é conhecer bem os profissionais, seus perfis e principalmente nosso mercado. Vamos buscar respostas importantes que poderão te ajudar a entender qual o cenário do mercado nos diversos lugares do Brasil.</p>
-	<p>São 49 questões e é muito importante que você responda todas. Tire um tempo para fazer isso, não faça com pressa.</p>
+	<p>Para adicionar códigos Javascript à uma página devemos usar a <a href="../html/oque<i>tag</i>s.html"><i>tag</i></a> <code>&lt;script&gt;</code>, podendo fazer essa inserção de duas formas:</p>
+	<p><b>1. Inserindo códigos na própria página (<i>inline</i>):</b></p>
+	<p>Cria-se uma <i>tag</i> &lt;script&gt;, informando que o valor do atributo 'type' é 'text/javascript', então, coloca-se o código Javascript dentro dessa <i>tag</i>.</p>
+	<p>Exemplo:</p>
+	<p>
+		<code>
+			&lt;script type = 'text/javascript'&gt;<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;alert('Olá mundo!');<br/>
+			&lt;/script&gt;
+		</code>
+	</p>
+	<p><b>2. Relacionando um arquivo externo na página:</b></p>
+	<p>Essa forma é bem parecida com a inserção de códigos Javascript <i>inline</i>, a maior diferença é que não coloca-se o código Javascript dentro da <i>tag</i>, visto que esse código estará em um arquivo externo. Assim, simplesmente é preenchido o atributo 'src' da <i>tag</i> <code>&lt;script&gt;</code> com o caminho para o arquivo em questão.</p>
+	<p>Essa forma também permite carregar arquivos Javascript sem ter que baixá-los para o seu projeto. Isso é bastante utilizado como uma forma de fazer com que arquivos que são usados por muitos projetos, como por exemplo a <a href="o-que-jquery.html">jQuery</a>, fiquem armazenados em <a href="https://pt.wikipedia.org/wiki/Cache" target="_blank">cache</a>, sendo então carregados de forma mais rápida.</p>
+	<p><b>Exemplo 1 - adicionando um Javascript do nosso projeto:</b></p>
+	<p>Imagine que o projeto está com a seguinte estrutura de diretórios:</p>
+	<p>
+		projeto/<br/>
+		&nbsp;&nbsp;arquivo.html (página que irá adicionar o arquivo Javascript)<br/>
+		&nbsp;&nbsp;js/<br/>
+		&nbsp;&nbsp;&nbsp;&nbsp;<b>meu-arquivo.js</b>
+	</p>
+	<p>Assim, se queremos que a página 'arquivo.html' carregue o arquivo 'js/meu-arquivo.js', utilizamos a seguinte marcação:</p>
+	<p>
+		<code>
+			&lt;script type = 'text/javascript' src = 'js/meu-arquivo.js'&gt;&lt;/script&gt;
+		</code>
+	</p>
+	<p><b>Exemplo 2 - adicionando um Javascript da internet:</b></p>
+	<p>Nesse exemplo, é carregado o <a href="o-que-framework.html"><i>framework</i></a> Javascript <a href="o-que-jquery.html">jQuery</a> disponibilizado pela Google por um serviço de hospedagem de <i>libraries</i> (bibliotecas) Javascript. Disponível em <a href="https://developers.google.com/speed/libraries/devguide?hl=pt-br#jquery" target="_blank">https://developers.google.com/speed/libraries/devguide?hl=pt-br#jquery</a>:</p>
+	<p>
+		<code>
+			&lt;script type = 'text/javascript' src = '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'&gt;&lt;/script&gt;
+		</code>
+	</p>
+	<p><b>Qual é o melhor local para colocar a <i>tag</i> <code>&lt;script&gt;</code>?</b></p>
+	<p>No geral, o melhor local para ser inserida uma <i>tag</i> <code>&lt;script&gt;</code> é antes do fechamento da <i>tag</i> <code>&lt;body&gt;</code>. Isso se dá devido ao fato de que o browser, ao encontrar uma <i>tag</i> <code>&lt;script&gt;</code>, precisa executar o que foi específicado ou dentro da <i>tag</i> ou pelo atributo 'src', bloqueando assim a renderização do restante da página.</p>
+	<p>Assim, o código Javascript é executado assim que é interpretado, logo, se existem elementos abaixo do código em questão que são manipulados por esse código (por exemplo, quer-se remover todos os links de uma determinada página e os links encontram-se abaixo da <i>tag</i> <code>&lt;script&gt;</code>), é necessário adicionar eventos indicando que a página já foi carregada completamente, caso contrário, é bem possível que o código não funcione corretamente. </p>
 </article>
