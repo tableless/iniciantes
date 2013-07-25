@@ -7,6 +7,34 @@ title: Inserindo CSS
 <article class="content">
 	<h1>Incluindo CSS na página</h1>
 	<h2>Existem três formas para incluir o código CSS em seu projeto</h2>
-	<p>A ideia é conhecer bem os profissionais, seus perfis e principalmente nosso mercado. Vamos buscar respostas importantes que poderão te ajudar a entender qual o cenário do mercado nos diversos lugares do Brasil.</p>
-	<p>São 49 questões e é muito importante que você responda todas. Tire um tempo para fazer isso, não faça com pressa.</p>
+	
+	<h3>Inline</h3>
+	<p>A primeira forma de aplicar CSS a uma página é utilizando o atributo <code>style</code> em elementos do HTML:</p>
+	<pre class="lang-html prettyprint linenums">
+&lt;p style=&quot;color: blue&quot;&gt;Par&aacute;grafo com fonte azul.&lt;/p&gt;
+&lt;p&gt;Esse outro par&aacute;grafo n&atilde;o &eacute; azul, a n&atilde;o ser que 
+exista &lt;span style=&quot;color: red&quot;&gt;CSS em outro lugar&lt;/span&gt;.&lt;/p&gt;
+	</pre>
+
+	<h3>Interno</h3>
+	<p>A segunda forma é utilizar a tag <code>style</code> dentro do <code>head</code> da página HTML:</p>
+
+	<pre class="lang-html prettyprint linenums">
+&lt;head&gt;
+	&lt;style type=&quot;text/css&quot;&gt;
+		seletor { propriedade: atributo }
+	&lt;/style&gt;
+&lt;/head&gt;
+	</pre>
+
+	<h3>Externo</h3>
+	<p>E a última - porém a mais utilizada - maneira de aplicar CSS é criar um ou mais arquivos com extensão <code>.css</code> e incluí-los na estrutura <code>head</code> do HTML:</p>
+
+	<pre class="lang-html prettyprint linenums">
+&lt;head&gt;
+	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;reset.css&quot;&gt;
+	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;&gt;
+&lt;/head&gt;
+	</pre>
+
 </article>
