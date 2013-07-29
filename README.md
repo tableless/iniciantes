@@ -8,7 +8,29 @@ Guia básico para iniciantes
 ----------
 Se você quiser ajudar a melhorar este guia, escrevendo, corrigindo ou aprimorando a experiência de utilização, por favor, faça um FORK do projeto e mãos à obra.
 
-Utilizamos [Jekyll](http://jekyllrb.com) para gerar páginas estáticas.
+Como funciona
+----------
+Utilizamos [Jekyll](http://jekyllrb.com) uma Gem do [Ruby](http://www.ruby-lang.org/) para gerar páginas estáticas.
+
+1. Instale o [Ruby](http://www.ruby-lang.org/pt/downloads/) 
+
+2. Instale a Gem do [Jekyll](http://jekyllrb.com/):
+    ```
+    sudo gem install jekyll
+    ```
+3. Clone o projeto:
+    ```
+    git@github.com:tableless/iniciantes.git
+    ```
+4. Vá a pasta do projeto:
+    ```
+    cd iniciantes
+    ```
+5. Inicie o [Jekyll](http://jekyllrb.com/):
+    ```
+    jekyll serve
+    ```
+5. Acesse [http://localhost:4000/iniciantes/](http://localhost:4000/iniciantes/)
 
 Escrevendo código com sintax highlight
 ----------
