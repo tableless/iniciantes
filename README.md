@@ -15,20 +15,19 @@ Utilizamos [Jekyll](http://jekyllrb.com) uma Gem do [Ruby](http://www.ruby-lang.
 1. Instale o [Ruby](http://www.ruby-lang.org/pt/downloads/) 
 
 2. Instale a Gem do [Jekyll](http://jekyllrb.com/):
-
     ```
     sudo gem install jekyll
     ```
 3. Clone o projeto:
     ```
-	git@github.com:tableless/iniciantes.git
+    git@github.com:tableless/iniciantes.git
     ```
 4. Vá a pasta do projeto:
     ```
     cd iniciantes
     ```
 5. Inicie o [Jekyll](http://jekyllrb.com/):
-	```
+    ```
     jekyll serve
     ```
 5. Acesse [http://localhost:4000/iniciantes/](http://localhost:4000/iniciantes/)
