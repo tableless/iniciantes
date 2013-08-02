@@ -36,20 +36,20 @@ Escrevendo código com sintax highlight
 ----------
 Para escrever código, usamos o Google Prettify, que já é conhecido de todos. Uma estrutura para código básica segue abaixo:
 
-	&lt;pre class="lang-html prettyprint linenums"&gt;
-    &lt;!DOCTYPE html&gt;
-	&lt;html lang=&quot;pt-br&quot;&gt;
-	&lt;head&gt;
-	&lt;title&gt;&lt;/title&gt;
-	&lt;meta charset=&quot;utf-8&quot;&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
+	<pre class="lang-html prettyprint linenums">
+        &lt;!DOCTYPE html&gt;
+	    &lt;html lang=&quot;pt-br&quot;&gt;
+	      &lt;head&gt;
+	        &lt;title&gt;&lt;/title&gt;
+	        &lt;meta charset=&quot;utf-8&quot;&gt;
+	      &lt;/head&gt;
+	      &lt;body&gt;
 
-	&lt;/body&gt;
-	&lt;/html&gt;
-	&lt;/pre&gt;
+	      &lt;/body&gt;
+	    &lt;/html&gt;
+	</pre>
 
-A classe **`lang-x`** define a linguagem do código, onde **`x`** é a linguagem (javascript, css, php, asp, ruby e assim por diante). Lembre-se de escapar sinais como &lt; &gt; colocando em entidades HTML (&amp;lt; &amp;gt;).
+A classe `lang-x` define a linguagem do código, onde `x` é a linguagem (javascript, css, php, asp, ruby e assim por diante). Lembre-se de escapar sinais como &lt; &gt; colocando em entidades HTML (&amp;lt; &amp;gt;).
 
 Estrutura básica de diretórios
 ----------
