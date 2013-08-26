@@ -5,8 +5,35 @@ title: Sintaxe do CSS
 {% include submenu-css.html %}
 
 <article class="content">
-	<h1>Escrevando CSS</h1>
+	<h1>Escrevendo CSS</h1>
 	<h2>Como escrever código CSS</h2>
-	<p>A ideia é conhecer bem os profissionais, seus perfis e principalmente nosso mercado. Vamos buscar respostas importantes que poderão te ajudar a entender qual o cenário do mercado nos diversos lugares do Brasil.</p>
-	<p>São 49 questões e é muito importante que você responda todas. Tire um tempo para fazer isso, não faça com pressa.</p>
+
+
+
+	<h3>Sintaxe</h3>
+
+<p>Para escrever código CSS é necessário seguir uma regra. A regra é uma declaração que possui uma sintaxe própria bem simples que define a forma com que o estilo será aplicado aos nossos elementos HTML. Você pode ver a regra a seguir:</p>
+
+<pre class="lang-html prettyprint linenums">
+seletor{
+	propriedade: valor;
+}
+</pre>
+
+<p>A nossa regra como pode ser visto é composto de três partes principais: um seletor, uma propriedade e um valor a se aplicar.</p>
+<p>Explicando de forma grotesca o seletor nada mais é do que o nosso elemento HTML ao qual queremos aplicar a regra (por exemplo: <p>, <div>, <body>). </p>
+<p>A propriedade é o atributo do elemento que será aplicado a regra. (por exemplo: color, font, position).</p>
+<p>Valor é a característica que o elemento irá assumir (por exemplo: cor azul, tamanho 14 para a fonte).</p>
+
+	<h3>Exemplificando</h3>
+	
+<p>Vamos para um exemplo:</p>
+<pre class="lang-html prettyprint linenums">
+body{
+	background-color: #000;
+}
+</pre>
+
+<p>No nosso exemplo o elemento ao qual estamos aplicando a regra é o BODY este é o nosso seletor, a nossa propriedade é background-color que define a cor de fundo do documento e o nosso valor #000 qué é igual a cor preta.</p>
+
 </article>
