@@ -57,6 +57,36 @@ Dentro de **manual** você encontra todos os textos do guia. Lá está separado 
 
 A pasta **assets** guarda o CSS, o JS e as imagens usadas no projeto.
 
+
+```
+| iniciantes/
+|
+|-- _includes/
+|
+|-- _layouts/
+|
+|-- assets/
+|   |-- imgs
+|   |-- javascripts
+|   |-- stylesheet
+|
+|-- manual/
+|   |-- css
+|   |-- html
+|   |-- js
+|   |-- obasico
+|
+|-- slide/
+|   |-- css
+|   	|-- fonts
+|   	|-- galery-sass
+|   	|-- galery
+|   |-- img
+|   |-- js
+|   |-- layout
+```
+
+
 Da comunidade para a comunidade
 ----------
 Esta iniciativa é da comunidade para a comunidade. Prezamos pelo bom conteúdo e sabemos que encontrar conteúdo básico é muito difícil, por isso tente divulgar o máximo que puder para aqueles que estão começando. Dessa forma temos a certeza de que a qualidade da internet brasileira vai crescer ainda mais.
