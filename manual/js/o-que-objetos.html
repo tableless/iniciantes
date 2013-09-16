@@ -5,8 +5,95 @@ title: O que são Objetos
 {% include submenu-js.html %}
 
 <article class="content">
-	<h1>O que são Objetos</h1>
+	<h1>O que são Objetos?</h1>
 	<h2>Programação orientada a objetos</h2>
-	<p>A ideia é conhecer bem os profissionais, seus perfis e principalmente nosso mercado. Vamos buscar respostas importantes que poderão te ajudar a entender qual o cenário do mercado nos diversos lugares do Brasil.</p>
-	<p>São 49 questões e é muito importante que você responda todas. Tire um tempo para fazer isso, não faça com pressa.</p>
+	<p>Em JavaScript, qualquer tipo de dado exceto números, strings, booleanos, null e undefined, são objetos. A linguagem possui também dois tipos de "objetos especiais" que são: <a href="/iniciantes/manual/js/arrays.html">Arrays</a> e <a href="/iniciantes/manual/js/funcoes.html">Funções</a>.</p>
+
+	<p>Um objeto é como uma coleção de atributos, ou propriedades. Cada propriedade recebe um nome e armazena um valor que pode ser recuperado em outras partes do programa. O nome de uma propriedade pode ser qualquer string, e o valor que ela armazena pode ser qualquer tipo primitivo (exceto undefined) ou até mesmo um outro objeto. Quando atribuimos uma função ao valor de uma propriedade, obtemos o que é chamado de método.</p>
+
+	<p>Além de mapear valores, os objetos também possuem um poderoso recurso chamado <strong>herança prototípica</strong>, que permite que um objeto herde propriedades e métodos de outros objetos. Essa é uma característica muito importante do JavaScript.</p>
+
+	<h2>Criando objetos</h2>
+	<p><b>Notação literal</b></p>
+	<p>A forma mais fácil e recomendável de se criar objetos é utilizando notação literal. Um objeto literal é composto por um par de chaves "<code>{}</code>", que envolve uma ou mais propriedades. Cada propriedade segue o formato "<code>nome: valor</code>" e devem ser separadas por vírgula. Exemplo:</p>
+<pre class="lang-javascript prettyprint linenums">
+var aluno = {
+	nome: "João",
+	idade: 17
+};
+</pre>
+
+	<p>No código acima criamos um objeto aluno, que possui duas propriedades: nome e idade. Simples assim. É interessante notar que não colocamos uma vírgula após a última propriedade. Fazendo isso, evitamos problemas em algumas implementações da ECMAScript 3.</p>
+
+	<p><b>Função construtora</b></p>
+	<p>Outra maneira comum de se criar objetos é utilizando uma função construtora. Você pode usar funções construtoras nativas do JavaScript e em alguns casos criar construtoras personalizadas. Para inicializar um novo objeto com uma função construtora, você deve usar a palavra-chave <code>new</code>.</p>
+<pre class="lang-javascript prettyprint linenums">
+var aluno = new Object();
+aluno.nome = "João";
+aluno.idade = 17;
+</pre>
+
+	<h2>Acessando propriedades</h2>
+	<p>Podemos recuperar os valores armazenados em um objeto, de duas maneiras:</p>
+<pre class="lang-javascript prettyprint linenums">
+// notação de ponto
+aluno.nome // João
+
+// notação de colchetes
+aluno["nome"] // João
+</pre>
+
+	<p>Se tentarmos recuperar o valor de uma propriedade que não existe em nosso objeto, será retornado o valor <code>undefined</code>.</p>
+<pre class="lang-javascript prettyprint linenums">
+aluno.email // undefined
+</pre>
+
+	<h2>Alterando e adicionando propriedades</h2>
+	<p>O valor de uma propriedade pode ser alterado por uma expressão de atribuição:</p>
+<pre class="lang-javascript prettyprint linenums">
+aluno.nome = "José";
+</pre>
+
+	<p>Caso a propriedade referenciada ainda não existir no objeto, ela será criada:</p>
+<pre class="lang-javascript prettyprint linenums">
+aluno.email = "jose@exemplo.com";
+
+aluno.status = "Aprovado";
+
+aluno.mudaStatus = function(status) {
+	this.status = status;
+};
+</pre>
+
+	<h2>Dados por referência</h2>
+	<p>É importante notar que, diferente dos tipos de dados primitivos, os objetos são armazenados por referência, ou seja, eles não são copiados e gravados diretamente em uma variável.</p>
+<pre class="lang-javascript prettyprint linenums">
+var alunoUm = { nome: "José" };
+var alunoDois = alunoUm;
+
+alunoUm.nome = "João";
+
+alunoUm.nome // João
+alunoDois.nome // João
+</pre>
+
+	<p>No exemplo acima, nós copiamos o objeto <i>alunoUm</i> para a variável <i>alunoDois</i>, mas ao alterar o valor da propriedade <i>nome</i> do objeto <i>alunoUm</i>, essa mudança também afetou o objeto <i>alunoDois</i>. Isso acontece porque os dados do objeto apenas foram passados por referência, na verdade não foi criado um "clone" com suas próprias propriedades e valores.</p>
+
+	<h2>Deletando propriedades</h2>
+	<p>Você pode deletar uma propriedade de um objeto utilizando o operador <code>delete</code>.</p>
+<pre class="lang-javascript prettyprint linenums">
+aluno.idade // 17
+
+delete aluno.idade // remove a propriedade
+
+aluno.idade // undefined
+</pre>
+
+	<h2>Leitura adicional</h2>
+	<p>Agora você já sabe o básico sobre objetos em JavaScript. Para uma abordagem mais profunda sobre o assunto, consultar <strong>bons livros</strong> pode ser de grande ajuda.</p>
+
+	<ul>
+		<li>"O Melhor do JavaScript", por Douglas Crockford. Capítulo 4, Página 26.</li>
+		<li>"JavaScript - O Guia Definitivo" - 6ª Edição, por David Flanagan. Capítulo 6, Página 112.</li>
+	</ul>
 </article>
