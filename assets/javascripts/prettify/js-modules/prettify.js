@@ -22,7 +22,7 @@
  * <a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html#langs">README</a>
  * file that came with this source.  At a minimum, the lexer should work on a
  * number of languages including C and friends, Java, Python, Bash, SQL, HTML,
- * XML, CSS, Javascript, and Makefiles.  It works passably on Ruby, PHP and Awk
+ * XML, CSS, JavaScript, and Makefiles.  It works passably on Ruby, PHP and Awk
  * and a subset of Perl, but, because of commenting conventions, doesn't work on
  * Smalltalk, Lisp-like, or CAML-like languages without an explicit lang class.
  * <p>
