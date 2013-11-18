@@ -53,7 +53,7 @@ A classe `lang-x` define a linguagem do código, onde `x` é a linguagem (javasc
 
 Estrutura básica de diretórios
 ----------
-Dentro de **manual** você encontra todos os textos do guia. Lá está separado em 4 pastas básicas: **obasico** onde agrupa textos sobre o conceito da área. A pasta **HTML** contém textos sobre HTML e seu funcionamento. A pasta **CSS** tem textos sobre CSS. E por último mas não menos importante, a pasta **JS** guarda textos sobre Javascript e afins.
+Dentro de **manual** você encontra todos os textos do guia. Lá está separado em 4 pastas básicas: **obasico** onde agrupa textos sobre o conceito da área. A pasta **HTML** contém textos sobre HTML e seu funcionamento. A pasta **CSS** tem textos sobre CSS. E por último mas não menos importante, a pasta **JS** guarda textos sobre JavaScript e afins.
 
 A pasta **assets** guarda o CSS, o JS e as imagens usadas no projeto.
 
