@@ -7,6 +7,24 @@ title: Arrays
 <article class="content">
 	<h1>Arrays</h1>
 	<h2>Valores agrupados</h2>
-	<p>A ideia é conhecer bem os profissionais, seus perfis e principalmente nosso mercado. Vamos buscar respostas importantes que poderão te ajudar a entender qual o cenário do mercado nos diversos lugares do Brasil.</p>
-	<p>São 49 questões e é muito importante que você responda todas. Tire um tempo para fazer isso, não faça com pressa.</p>
+	<p>Com o Array é possível armazenar um conjunto de qualquer valores javascript, como números, caracteres ou textos ou uma mistura deles. Imagine o array como um gaveteiro onde você pode adicionar ou retirar gavetas e cada gaveta comtém o objeto que quiser, vamos criar aqui um gaveteiro onde a primeira gaveta contém o valor 10 a segunda 20 e a terceira 30.</p>
+	<p>Vejamos:</p>
+	<pre class="lang-javascript linenums prettyprint">
+var  gaveteiro = [10,20,30];</pre>
+
+	<p>Simples não é? A diferença no Javascript é que a contagem de cada posição do array começa em zero, assim temos: gaveta 0, gaveta 1 e gaveta 2.</p>
+	<p><b>Acessando elementos do array</b></p>
+	<p>Com o nosso array criado podemos visualizar cada uma das posições individualmente colocando o indice dentro de colchetes:</p>
+	<pre class="lang-javascript linenums prettyprint">
+console.log(gaveteiro[2]); //30 
+console.log(gaveteiro[1]); //20
+console.log(gaveteiro[0]); //10</pre>
+	<p>Também podemos alterar o valor de cada posição da seguinte forma:</p>
+<pre class="lang-javascript linenums prettyprint">
+var  gaveteiro = [10,20,30];
+gaveteiro[2] = 99;
+console.log(gaveteiro[2]);
+</pre>
+	<p>Assim dizemos que gaveteiro na posição 2 recebeu o valor 99.</p>
+
 </article>
