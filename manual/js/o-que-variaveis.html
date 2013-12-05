@@ -14,18 +14,17 @@ title: O que são variáveis?
 
 	<p>
 		Variáveis são nomes que referenciam a um espaço na memória do computador.
-
 		Elas são utilizadas para guardar informações que serão usadas em seus programas. 		
 	</p>
 
 	<p>
-		Para elucidar este conceito, imagine que a memória do seu computador é um armário com 100 gavetas e você guarda cada tipo de coisa em uma gaveta diferente. <br />
-
-		Se você não for um super humano, como eu, provavelmente você vai querer criar etiquetas com nomes, referenciando o que está guardado em cada uma delas. <br />
+		Para elucidar este conceito, imagine que a memória do seu computador é um armário com 100 gavetas e você guarda cada tipo de coisa em uma gaveta diferente. <br />
+		Se você não for um super humano, como eu, provavelmente você vai querer criar etiquetas com nomes, referenciando o que está guardado em cada uma delas. <br />
 	</p>
 
 	<p>
-		Mas por que o nome "Variável", foi dado este nome, por que elas podem ter seus valores alterados durante a execução de um programa. Voltando a ideia das gavetas, você poderia ter em uma delas 2 meias agora e colocar mais 5 depois de um tempo e caso seja um colecionador 200 no futuro.
+		Mas por que o nome "Variável"?<br />
+		Porque elas podem ter seus valores alterados durante a execução de um programa. Voltando à ideia das gavetas, você poderia ter em uma delas 2 meias agora e colocar mais 5 depois de um tempo e, caso seja um colecionador, 200 no futuro.
 	</p>
 
 	<h2>
@@ -33,8 +32,8 @@ title: O que são variáveis?
 	</h2>
 
 	<p>
-		Para criar uma variável no javascript utilizamos o operador '=' operador de atribuição. <br />
-		Devemos sempre escolher um nome que identifique o tipo de dado que teremos guardado, para facilitar a leitura de nosso código. 
+		Para criar uma variável no javascript utilizamos o operador '=' (operador de atribuição). 
+		Devemos sempre escolher um nome que identifique o tipo de dado que teremos guardado para facilitar a leitura de nosso código.
 	</p>
 
 	<p>Exemplo:</p>
@@ -51,11 +50,11 @@ title: O que são variáveis?
 	</p>
 
 	<p>
-		O operador "var" indica que você está declarando uma variável. Embora não seja obrigatório a utilização é interessante pois assim fica claro em que parte do seu código essa variável foi criada.	
+		O operador "var" indica que você está declarando uma variável. Embora não seja obrigatória, sua utilização facilita o entendimento do seu código.
 	</p>
 
 	<p>
-		Note também que no final de cada linha utilizamos o operador ';' ponto e virgula, que identifica onde a linha de código termina. Esse operador embora não seja obrigatório, faz com que o seu código seja mais preciso e claro.
+		Note também que no final de cada linha utilizamos o operador ';' (ponto e vírgula), que identifica onde a linha de código termina. Esse operador embora não seja obrigatório, faz com que o seu código seja mais preciso e claro.
 	</p>
 
 	<p>
@@ -63,12 +62,8 @@ title: O que são variáveis?
 	</p>
 
 	<p>
-		Vamos brincar um pouco com as variáveis e assim aprender mais sobre elas. Para isso abra o seu editor de texto preferido. Salve o arquivo .html em uma pasta de sua preferência com a 
-		<a href="/iniciantes/manual/html/estruturabasica.html" title="Estrutura básica de uma página HTML">
-			estrutura básica </a> e depois abra este arquivo em um navegador.
-	</p>
-
-	<p>
+		Vamos brincar um pouco com as variáveis e assim aprender mais sobre elas. Para isso abra o seu editor de texto preferido. Salve o arquivo .html em uma pasta de sua preferência com a <a href="/iniciantes/manual/html/estruturabasica.html" title="Estrutura básica de uma página HTML">
+		estrutura básica </a> e depois abra este arquivo em um navegador. <br />
 		É interessante que você digite o código ao invés de copiar e colar para fixar melhor.
 	</p>
 
@@ -89,10 +84,8 @@ title: O que são variáveis?
 	</p>
 
 	<p>
-		Neste exemplo, declaramos uma variável <b>nome</b> onde temos a intenção de guardar o nome da pessoa que está acessando o site e utilizamos a função <b> prompt </b> para pedirmos que este usuário digite seu nome. 
-	</p>
-	<p>
-		Logo depois, decidimos apresentar a mensagem de boas vindas a este usuário, utilizando o nome guardado na variável. 
+		Neste exemplo, declaramos uma variável nome onde temos a intenção de guardar o nome da pessoa que está acessando o site. Utilizamos a função prompt para pedirmos que este usuário digite seu nome.
+		Logo depois, decidimos apresentar a mensagem de boas vindas a este usuário, utilizando o nome guardado na variável.
 	</p>
 	
 	<!--++++++++++++++++++++++++++++-->
@@ -121,13 +114,12 @@ title: O que são variáveis?
 	</p>
 
 	<p>
-		Neste exemplo vimos coisas novas e novidades sempre são bem vindas. O operador '//' barra barra, é o operador utilizado quando desejamos adicionar um comentário em uma linha. Um comentário é um trecho dentro do seu código que não é executado, ou seja, ele está ali só para que o leitor entenda o que está acontecendo.<br />
+		Neste exemplo, vimos algumas coisas novas, e novidades sempre são bem vindas! O operador '//' (barra, barra), é o operador utilizado quando desejamos adicionar um comentário em uma linha. Um comentário é um trecho dentro do seu código que não é executado, ou seja, ele está ali só para que o leitor entenda o que está acontecendo.
 	</p>
 
 	<p>
-		Além do operador de uma linha, temos também o de várias linhas, onde podemos por exemplo, colocar um texto explicativo de alguma coisa.
-		Este operador tem a seguinte sintaxe: <br /> 
-		
+		Mas este operador tem um limite, neste caso o texto só pode conter uma linha. Mas acalme-se porque também há um operador de comentário com várias linhas. Este operador tem a seguinte sintaxe: 
+	
 		<i>
 			/* texto explicativo */
 		</i>	
@@ -146,7 +138,7 @@ title: O que são variáveis?
 			<li>
 				<b>Variáveis em javascript são "Case-Sensitive".</b>
 				<p>
-					Este termo significa que nomes com letras maiusculas são diferentes de nomes com letras minusculas. Logo, para um programa em javascript, <b>Nome</b> é diferente de <b>nome</b>.  
+					Este termo significa que nomes com letras maiúsculas são diferentes de nomes com letras minúsculas. Logo, para um programa em javascript, <b>Nome</b> é diferente de <b>nome</b>.  
 				</p>
 			</li>
 			<li>
@@ -207,13 +199,13 @@ title: O que são variáveis?
 	</h2>
 
 	<p>
-		Quando falamos em tipos de variáveis temos as linguagens chamadas de fortemente tipadas e fracamente tipadas. 
+		Quando falamos em tipos de variáveis, temos as linguagens chamadas de fortemente tipadas e fracamente tipadas. 
 	</p>
 	<p>		
-		Em linguagens fortemente tipadas, definimos o tipo da variável no momento de sua criação. Exemplos de linguagens do tipo: Java, C, C++, entre outras. 
+		Em linguagens fortemente tipadas, definimos o tipo da variável no momento de sua criação. Exemplos de linguagens do tipo: Java, C, C++, entre outras.
 	</p>
 	<p>
-		Em linguagens fracamente tipadas, não precisamos definir o tipo da variável, ela é tipada automaticamente quando recebe um valor. Exemplos de linguagens do tipo: Python, Ruby, Javascript, entre outras.		
+		Em linguagens fracamente tipadas, não precisamos definir o tipo da variável, ela é tipada automaticamente quando recebe um valor. Exemplos de linguagens do tipo: Python, Ruby, Javascript, entre outras.	
 	</p>
 
 	<p>
@@ -246,7 +238,7 @@ title: O que são variáveis?
 			</p>
 
 			<p>
-				<i><b>Observação:</b> em linguagens de programação utilizamos "." ponto final, para separarmos casas decimais ao invés da ',' vigula.</i>				
+				<i><b>Observação:</b> em linguagens de programação utilizamos "." (ponto final), para separarmos casas decimais ao invés da ',' (vírgula).</i>				
 			</p>
 		</li>
 
