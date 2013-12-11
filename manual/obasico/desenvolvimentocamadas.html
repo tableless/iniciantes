@@ -7,5 +7,22 @@ title: O que é desenvolvimento por camadas?
 <article class="content">
 	<h1>Desenvolvimento por camadas</h1>
 	<h2>Separando a informação, formatação e comportamento</h2>
-		<p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+
+	<p>Basicamente existem três separações no desenvolvimento web: <strong>Informação</strong>, que fica com o código HTML, onde você vai dar significado à informação. <strong>Formatação</strong>, que fica com mo CSS, que é como você vai deixar bonito toda a informação marcada com HTML. E por fim a camada de <strong>Comportamento</strong>, que é como você vai controlar elementos do HTML com Javascript e seus frameworks.</p>
+
+	<p>O HTML vai servir para marcar sua informação dando significado a ela. Se você marca uma frame com a tag &lt;H1&gt;, você está dizendo para leitores de telas para cegos e os browsers que aquela frase se trata de um título importante. Você deu significado à este pedaço de texto.</p>
+
+	<p>Logo depois você precisará deixar esse título com uma cor diferente, com um background bonito e uma font legal. Aí você entra com o CSS para fazer esse trabalho. Essa formatação é importante por que você precisa deixar o site do jeito que o Designer quer. Lembre-se que aqui você só modifica o visual do elemento e não o significado dele.</p>
+
+	<p>Essa separação garante que ao modificar o código CSS você não estrague o trabalho já feito no HTML. Os códigos estão totalmente separados e você consegue manter a organização sob controle, mantendo cada código em seu devido lugar.</p>
+	<p>Por isso, evite inserir código CSS direto no HTML, como o exemplo abaixo:</p>
+
+<pre class="lang-html prettyprint linenums">
+&lt;h1 style=&quot;background-color: orange;&quot;&gt;T&iacute;tulo com fundo laranja&lt;/h1&gt;
+</pre>
+
+	<p>Isso faz com que você suje seu código HTML e não deixe seu código CSS centralizado em um lugar. Suponha que você tenha outros títulos com o fundo laranja e queira mudar todos para outra cor, você terá que encontrar cada um deles dentro do seu projeto e mudar manualmente cada um. Com o desenvolvimento em camadas você não tem problemas assim.</p>
+
+	<p>Este é o conhecimento básico sobre camadas client-side que você pode ter.</p>
+
 </article>
