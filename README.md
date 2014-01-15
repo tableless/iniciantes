@@ -32,7 +32,7 @@ Utilizamos [Jekyll](http://jekyllrb.com) uma Gem do [Ruby](http://www.ruby-lang.
     ```
 5. Acesse [http://localhost:4000/iniciantes/](http://localhost:4000/iniciantes/)
 
-Escrevendo código com sintax highlight
+Escrevendo código com syntax highlight
 ----------
 Para escrever código, usamos o Google Prettify, que já é conhecido de todos. Uma estrutura para código básica segue abaixo:
 
