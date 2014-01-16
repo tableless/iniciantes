@@ -1,0 +1,278 @@
+---
+layout: interna
+title: O que são variáveis?
+---
+{% include submenu-js.html %}
+
+<article class="content">
+	<h1>O que são variáveis?</h1>
+	<h2>Crie, manipule e use valores variáveis</h2>
+
+	<p>
+		Variável é um dos conceitos mais importantes no estudo de programação, independente da plataforma ou linguagem utilizada. Uma variável referencia a um espaço na memória do computador utilizado para guardar informações que serão usadas em seus programas. 
+	</p>
+
+	<p>
+		Para elucidar o conceito, imagine que a memória de seu computador é um armário com 100 gavetas e você guarda cada tipo de objeto em uma gaveta diferente. Provavelmente você vai querer criar etiquetas para referenciar o que guarda em cada gaveta. <br />
+	</p>
+
+	<p>
+		Mas por que o nome "variável"?<br />
+		Porque uma variável pode ter o seu valor alterado durante a execução de um programa. Ainda na analogia anterior, suponha que há uma gaveta "Meias" com 2 meias; se necessário, pode-se adicionar mais 5 meias e, caso seja um colecionador, até 200. Assim a gaveta "Meias" muda o seu valor.
+	</p>
+
+	<h2>
+		Criando variáveis		
+	</h2>
+
+	<p>
+		Para criar uma variável utiliza-se <code>var</code> (opcional) e, para determinar o seu valor, o operador de atribuição (<code>=</code>).
+		Para facilitar a compreensão do código, deve-se sempre escolher um nome que identifique o tipo de dado a ser armazenado.
+	</p>
+
+	<p>Exemplo:</p>
+
+	<p>
+		<pre class="lang-html prettyprint linenums">
+&lt;script&gt;
+
+  var nome = &quot;Gabriel Mendon&ccedil;a&quot;;
+  var idade = 25;  
+
+&lt;/script&gt;
+		</pre>
+	</p>
+
+	<p>
+		Note também que no final de cada linha foi utilizado o ponto-e-vírgula (;), responsável por delimitar expressões, <i>statements</i> e construtores. Embora não seja obrigatório, faz com que o seu código seja mais preciso e claro.
+	</p>
+	
+	<p>
+		Observação: o código ainda pode ser simplificado deixando apenas uma declaração <code>var</code> e separando cada variável por vírgula e fechando a declaração em seu final com ponto-e-vírgula.
+	</p>
+
+	<p>
+		<b>Brincando um pouco!</b>
+	</p>
+
+	<p>
+		Abra seu editor de texto preferido; salve o arquivo HTML em uma pasta de sua preferência com a <a href="/iniciantes/manual/html/estruturabasica.html" title="Estrutura básica de uma página HTML">estrutura básica</a>, e abra o arquivo em um navegador. <br />
+		Observação: Em vez de copiar e colar, é interessante que você digite o código para que se adapte à sintaxe da linguagem.
+	</p>
+
+	<!--++++++++++++++++++++++++++++-->
+
+	<p>
+		<b>Exemplo 1</b>
+
+		<pre class="lang-html prettyprint linenums">
+&lt;script&gt;
+
+  var nome = prompt('Digite seu nome: ');
+  alert(nome + ', seja bem vindo!');  
+
+&lt;/script&gt;
+		</pre>
+
+	</p>
+
+	<p>
+		Nesse exemplo, declaramos a variável "nome", onde guardamos o nome que foi solicitado ao usuário através do método <code>prompt()</code>.
+		Após o nome informado ser armazenado (isso é, se tornado valor da variável), uma mensagem de boas vindas é apresentada ao usuário através do método <code>alert()</code> utilizando o nome armazenado na variável.
+	</p>
+	
+	<!--++++++++++++++++++++++++++++-->
+
+	<p>
+		<b>Exemplo 2</b>
+
+		<pre class="lang-html prettyprint linenums">
+&lt;script&gt;
+	/* Este é um script
+	   para cálculo de idade! */
+	   
+
+	// Declara o ano atual para fazer o cálculo
+	var anoAtual = 2014;
+
+	// Pede que o usuário digite o ano em que nasceu
+	var anoNascimento = prompt('Digite o ano em que você nasceu.');
+
+	// Calcula a idade do usuário e armazena na variável idade
+	var idade = anoAtual - anoNascimento;
+
+	// Mostra ao usuário a idade que ele possui
+	alert("Sua idade é: " + idade + " anos");
+
+&lt;/script&gt;
+		</pre>
+	</p>
+
+	<p>
+		Nesse exemplo, vimos algumas coisas novas: operadores aritméticos de soma e subtração (<code>+</code>, <code>-</code>), o operador de concatenação (<code>+</code>, para operar strings) e de comentários (<code>//</code>  para linha única e <code>/* */</code> para múltiplas linhas). 
+	</p>
+	
+	<p>	Um comentário é um trecho no código que não é executado, e por isso serve como um espaço para explicações e descrições relacionadas ao código ou até mesmo para evitar a execução de um bloco de código.
+	</p>
+
+	<h2>Definindo nomes de variáveis</h2>
+
+	<p>
+		Quando criamos variáveis temos de levar em consideração algumas regras específicas da linguagem: 
+	</p>
+
+	<p>
+		<ul>
+			<li>
+				<b>Uma variável é <i>case-sensitive</i></b>
+				<p>
+					Isso significa que nomes com letras maiúsculas são diferentes de nomes com letras minúsculas: para um programa em JavaScript, <b>Nome</b> é diferente de <b>nome</b>.  
+				</p>
+			</li>
+			<li>
+				<b>Caracteres válidos</b>
+				<ul>
+					<li>
+						<b>Palavras:</b> embora a maioria dos navegadores já reconheça uma variedade de caracteres UTF-8 (como palavras com acentos e "ಠ_ಠ", por exemplo), o recomendado é o uso apenas letras de MAIÚSCULAS e minúsculas, sem acentos e espaços.<br />
+						<p>
+							<i>
+								var meuNOME = "joão"; <br />
+								var meunome = "josé"; <br />
+								var MeuNoMe = "Thiago"; <br />
+								var ಠ_ಠ = "JavaScript é legal!"; // Não recomendado, entretanto
+							</i>							
+						</p>
+					</li>
+					<li>
+						<b>Números:</b> desde que sejam precedidos por uma ou mais letras.<br />
+						<p>
+							<i>
+								var camisa9 = "ronaldo";<br />
+								var camisa230lateral = "joaozinho";
+							</i>							
+						</p>
+					</li>
+					<li>
+						<b>Underline e cifrão:</b> <b>"_"</b> e "$" também são permitidos em qualquer posição, mas pouco usados.<br /> 
+						<p>
+							<i>
+								var _nome = 'Gabriel' <br />
+								var segundo_nome = "Mendonça" <br />
+								var $ultimo_nome_ = ""
+							</i>							
+						</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</p>
+
+	<p>
+		<b>Nome reservados pela linguagem</b> <br />
+		Alguns nomes não podem ser utilizados para criação de variáveis pois estão reservados de alguma forma à linguagem. São eles: 
+	</p>
+
+	<p>
+		<i>
+			abstract boolean break byte case catch char class const continue		
+			default do double else extends 	false final finally float for function 	
+			goto if implements import in instanceof int interface long native new 	
+			null package private protected public return short static super switch 	
+			synchronized this throw throws transient true try var void while with			
+		</i>
+	</p>
+
+
+	<h2>
+		Tipos de variáveis	
+	</h2>
+
+	<p>
+		Quando falamos em tipos de variáveis, temos as linguagens chamadas de fortemente tipadas e fracamente tipadas. 
+	</p>
+	<p>		
+		Em linguagens fortemente tipadas, definimos o tipo da variável no momento de sua criação. Exemplos de linguagens do tipo: Java; C; C++.
+	</p>
+	<p>
+		Em linguagens fracamente tipadas, não precisamos definir o tipo da variável, ela é tipada automaticamente quando recebe um valor. Exemplos de linguagens do tipo: Python; Ruby; Javascript.	
+	</p>
+
+	<ul>
+		<li>
+			<p><b>Int</b> - Variáveis com valores inteiros.</p>
+			<p>
+				<i>
+					var idade = 17; <br />
+					var graus = -3; <br />
+					var pontos = 0; <br />
+					var numeroGrande = 2000009283;
+				</i>
+			</p>
+		</li>
+
+		<li>
+			<p><b>Float</b> - Variáveis com ponto flutuante ou casas decimais.</p>
+
+			<p>
+				<i>
+					var peso = 32.59345; <br />
+					var PI = 3.14; <br />
+					var meu_saldo = -1034.32					
+				</i>
+
+			</p>
+
+			<p>
+				<i><b>Observação:</b> em linguagens de programação utiliza-se "." (ponto final) para separar casas decimais em vez da ',' (vírgula).</i>				
+			</p>
+		</li>
+
+		<li>
+			<p><b>String</b> - Variáveis de texto, normalmente chamada de "cadeia de caracteres". Os valores desse tipo são atribuídos utilizando aspas duplas (") ou aspas simples (') como delimitador.</p>
+
+			<p>
+				<i>
+					var nome = "Gabriel Mendonça"; <br />
+					var data_nascimento = "17 de Junho de 1988"; <br />
+					var email = "gabriel@host2.com.br";<br />
+					var tempo = "20s";
+				</i>
+			</p>
+
+			<p>
+				Observação: Tudo o que é declarado entre os delimitadores (") ou (') é entendido como parte da string, mesmo que sejam números.</i>				
+			</p>
+		</li>
+
+		<li>
+			<p><b>Booleanos</b> - Tipo de dado de dois valores: "true" (verdadeiro) ou "false" (falso).</p>
+
+			<p>
+				<i>
+					var verdadeiro = true; <br />
+					var verdadeiro2 = 1; <br />
+
+					var falso1 = false; <br />
+					var false2 = 0; <br />
+					var falso3 = null <br />
+				</i>
+			</p>
+
+			<p>
+				<i><b>Observação:</b> Apesar dos valores <code>true</code> e <code>false</code> representarem, respectivamente, os valores "verdadeiro" e "falso", pode-se utilizar outros valores para essa representação, como exemplificado acima.</i>				
+			</p>
+		</li>
+
+		<li>
+			<p><b>Arrays</b> - Um array referencia a vários espaços na memória. É um conjunto de valores e/ou variáveis organizadas por índice (que pode ser um valor inteiro ou string). O entendimento desse tipo é muito importante.</p>
+			<p>Retomando a analogia inicial: imagine que em uma gaveta você queira armazenar bebidas. Nela teria suco, refrigerante, café, água mineral... Perceba que esses itens formam uma lista e que todos os itens são bebidas, ou seja, itens de uma mesma categoria. Com o uso de arrays evitamos declarar diversas variáveis para um mesmo grupo (nada de <code>bebida1</code>, <code>bebida2</code>!), acessando os itens pelos seus respectivos índices: <code>bebida[1]</code>, <code>bebida[2]</code>. Se você perceber, declarar várias variáveis para uma mesma coisa usaria desnecessariamente várias gavetas, enquanto declarar um array para armazenar todas as "mesmas coisas" usaria apenas uma. Não soa mais inteligente? :-)</p>
+			<p>Pense que, enquanto uma variável é uma casa, um array é um prédio; ou que um array é como um gaveteiro. Na seção <a href="/iniciantes/manual/js/arrays.html">Arrays</a> você entenderá melhor seu funcionamento.</p>
+		</li>
+
+		<li>
+			<p><b>Objetos</b> - Ver seção <a href="/iniciantes/manual/js/o-que-objetos.html">O que são objetos</a>.</p>
+		</li>
+
+
+	</ul>
+</article>

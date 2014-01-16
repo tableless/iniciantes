@@ -1,0 +1,126 @@
+---
+layout: interna
+title: O que são Objetos
+---
+{% include submenu-js.html %}
+
+<article class="content">
+	<h1>O que são Objetos?</h1>
+
+	<h2>Programação orientada a objetos</h2>
+
+	<p>Objetos são como uma espécie de "super <a href="o-que-variaveis.html">variáveis</a>" que armazenam uma "coleção de valores" referenciados por nome, e que podem ser recuperados para serem utilizados em diversas outras partes de um programa. Em JavaScript praticamente qualquer tipo de dado é um objeto.</p>
+
+	<p>Cada item dessa "coleção de valores", é chamado de <em>propriedade</em>. Cada propriedade é composta por um par de "nome: valor". Quando uma propriedade armazena uma <a href="funcoes.html">função</a>, ela se torna o que chamamos de <em>método</em>.</p>
+
+	<h2>Criando objetos</h2>
+
+	<p>Agora que já sabemos o que são objetos, vamos ver um pouco sobre como trabalhar com eles. Primeiramente vamos conhecer duas maneiras de se criar objetos.</p>
+
+	<p><b>Notação literal</b></p>
+
+	<p>A maneira mais simples (e recomendável) de se criar objetos em JavaScript é usando o que chamamos de <em>notação literal</em>. Um objeto literal é composto por um par de chaves "<code>{ }</code>", que envolve uma ou mais propriedades. Cada propriedade segue o formato "<code>nome: valor</code>" e devem ser separadas por vírgula.</p>
+
+	<p>Para entender bem, nada melhor que um exemplo. Imagine que você vai criar um programa para organizar álbuns de vários cantores e bandas. Aqui vamos criar um objeto para armazenar informações sobre um álbum da banda Metallica, depois você pode praticar criando objetos com suas bandas favoritas. Então, mãos a obra!</p>
+
+<pre class="lang-javascript prettyprint linenums">
+var album = {
+	title: "Metallica (Black Album)",
+	released: 1991,
+	showInfo: function() {
+		alert("Título do álbum: " + this.title + "Lançado em: " + this.released);
+	}
+};
+</pre>
+
+	<p>Conseguiu entender o que o código acima faz? Veja, é bem simples: primeiro criamos uma variável chamada "album". Depois criamos um objeto - note a abertura e fechamento das chaves: <code>{</code> e <code>}</code>. Então adicionamos duas propriedades e um método ao nosso objeto, que são: "title", "released" e "showInfo". Nas propriedades nós armazenamos o título e ano de lançamento do álbum, e no método temos uma função que irá exibir as informações sobre o álbum em uma "caixa de alerta" para o usuário. Mais fácil do que parece, não é mesmo?</p>
+
+	<p><b>Função construtora</b></p>
+
+	<p>Outra maneira de criar objetos em JavaScript é utilizando uma <em>função construtora</em>. Se quisermos criar o mesmo objeto que criamos anteriormente, só que usando uma função construtora para isso, basta escrever o seguinte código:</p>
+
+<pre class="lang-javascript prettyprint linenums">
+var album = new Object();
+album.title = "Metallica (Black Album)";
+album.released = 1991;
+album.showInfo = function() {
+	alert("Título do álbum: " + this.title + "Lançado em: " + this.released);
+};
+</pre>	
+
+	<p>Como você pôde notar, a sintaxe ficou um pouco diferente. Aqui devemos utilizar a palavra-chave <code>new</code> seguida pela função construtora <code>Object()</code> ao invés de abrir e fechar chaves. Depois nós adicionamos as propriedades e métodos utilizando <code>album.title</code>, <code>album.released</code> e <code>album.showInfo</code> e atribuimos os valores à elas ao invés de colocar os pares de "nome: valor".</p>
+
+	<h2>Acessando propriedades e métodos</h2>
+	
+	<p>Após ter criado um objeto, você vai precisar acessar os valores que ele armazena. Podemos acessar (ou se preferir: "recuperar") os valores guardados em um objeto, de duas maneiras: utilizando <em>notação de ponto</em> ou <em>notação de colchetes</em>. Veja um exemplo:</p> 
+
+<pre class="lang-javascript prettyprint linenums">
+// notação de ponto
+album.title // Retorna: Metallica (Black Album)
+
+// notação de colchetes
+album["title"] // Retorna: Metallica (Black Album)
+</pre>
+
+	<p>Repare que no código acima, acessamos a mesma propriedade de duas maneiras diferentes. Geralmente é recomendável que você utilize a notação de ponto - <code>album.title</code> - por ser mais simples de ler e escrever.</p>
+
+	<p>Como os métodos são funções, você deve adicionar um par de parênteses - <code>()</code> - quando for acessá-los. Fora isso, nada de diferente. Veja no exemplo abaixo:</p>
+
+<pre class="lang-javascript prettyprint linenums">
+// notação de ponto
+album.showInfo() // Exibe alerta: 
+		 // Título do álbum: Metallica (Black Album) Lançado em: 1991
+
+// notação de colchetes
+album["showInfo"]() // Exibe alerta: 
+		    // Título do álbum: Metallica (Black Album) Lançado em: 1991
+</pre>
+
+	<h2>Alterando e adicionando propriedades</h2>
+
+	<p><b>Alterando</b></p>
+
+	<p>Vez por outra vamos precisar alterar os valores armazenados nas propriedades de nossos objetos. Fazer isso também é bem tranquilo. Basta acessar a propriedade que deseja alterar, utilizando a notação de ponto que acabamos de conhecer, e atribuir o novo valor à ela. Quer um exemplo?</p>
+
+<pre class="lang-javascript prettyprint linenums">
+album.title = "Powerslave";
+album.released = 1984;	
+</pre>
+
+	<p>O que aconteceu no código acima? Isso mesmo. Alteramos o título do álbum e o ano de lançamento. Agora nosso objeto armazena informações sobre um outro álbum de outra banda.</p>
+
+	<p>Para fixar, antes de prosseguir a leitura (supondo que você esteja lendo e digitando os códigos para treinar), altere os valores de <code>title</code> e <code>released</code> para Metallica (Black Album) e 1991 novamente.</p>
+
+	<p><b>Adicionando</b></p>
+
+	<p>Bom, agora que o título do nosso álbum voltou a ser "Metallica (Black Album)", que tal adicionar uma lista com os títulos das faixas do álbum? Sim, nós podemos adicionar novas propriedades e métodos aos nossos objetos mesmo após ter criado eles. A sintaxe é a mesma utilizada para alterar valores, que nós acabamos de ver.</p>
+
+	<p>Objetos podem armazenar qualquer tipo de dado válido em JavaScript, então, para criar uma lista com os títulos das faixas de nosso álbum, basta seguir o exemplo abaixo:</p>
+
+<pre class="lang-javascript prettyprint linenums">
+// Aqui adicionamos um array com os nomes de algumas faixas do álbum.
+// Para praticar você pode adicionar todas as 12 faixas.
+album.tracks = ["Enter Sandman", "Sad but True", "Holier Than Thou", "The Unforgiven"];
+</pre>	
+
+	<h2>Deletando propriedades</h2>
+
+		<p>Você pode deletar uma propriedade ou método de um objeto utilizando o operador <code>delete</code> seguido pelo nome da propriedade. Vamos testar?</p>
+
+<pre class="lang-javascript prettyprint linenums">
+typeof album.showInfo // "function"
+
+delete album.showInfo // deleta o método showInfo
+
+typeof album.showInfo // "undefined"
+</pre>
+
+	<h2>Leitura adicional</h2>
+
+	<p>Agora você já sabe o básico sobre objetos em JavaScript. Para uma abordagem mais profunda sobre o assunto, consultar <strong>bons livros</strong> pode ser de grande ajuda. Seguem algumas recomendações:</p>
+
+	<ul>
+		<li>"O Melhor do JavaScript", por Douglas Crockford. Capítulo 4, Página 26.</li>
+		<li>"JavaScript - O Guia Definitivo" - 6ª Edição, por David Flanagan. Capítulo 6, Página 112.</li>
+	</ul>
+</article>

@@ -5,10 +5,10 @@ title: Inserindo JS na página?
 {% include submenu-js.html %}
 
 <article class="content">
-	<h1>Inserindo JS na página?</h1>
+	<h1>Inserindo JS na página</h1>
 	<h2>Como relacionar um arquivo JavaScript no seu HTML?</h2>
 	<p>Para adicionar códigos JavaScript à uma página devemos usar a <a href="../html/oque<i>tag</i>s.html"><i>tag</i></a> <code>&lt;script&gt;</code>, podendo fazer essa inserção de duas formas:</p>
-	<p><b>1. Inserindo códigos na própria página (<i>inline</i>):</b></p>
+	<h2>1. Inserindo códigos na própria página (<i>inline</i>):</h2>
 	<p>Cria-se uma <i>tag</i> &lt;script&gt;, informando que o valor do atributo 'type' é 'text/javascript', então, coloca-se o código JavaScript dentro dessa <i>tag</i>.</p>
 	<p>Exemplo:</p>
 	<pre class="lang-javascript lang-html prettyprint linenums">
@@ -16,10 +16,10 @@ title: Inserindo JS na página?
 		alert('Olá mundo!');
 	&lt;/script&gt;
 	</pre>
-	<p><b>2. Relacionando um arquivo externo na página:</b></p>
+	<h2>2. Relacionando um arquivo externo na página:</h2>
 	<p>Essa forma é bem parecida com a inserção de códigos JavaScript <i>inline</i>, a maior diferença é que não coloca-se o código JavaScript dentro da <i>tag</i>, visto que esse código estará em um arquivo externo. Assim, simplesmente é preenchido o atributo 'src' da <i>tag</i> <code>&lt;script&gt;</code> com o caminho para o arquivo em questão.</p>
 	<p>Essa forma também permite carregar arquivos JavaScript sem ter que baixá-los para o seu projeto. Isso é bastante utilizado como uma forma de fazer com que arquivos que são usados por muitos projetos, como por exemplo a <a href="o-que-jquery.html">jQuery</a>, fiquem armazenados em <a href="https://pt.wikipedia.org/wiki/Cache" target="_blank">cache</a>, sendo então carregados de forma mais rápida.</p>
-	<p><b>Exemplo 1 - adicionando um JavaScript do nosso projeto:</b></p>
+	<h3>Exemplo 1 - adicionando um JavaScript do nosso projeto:</h3>
 	<p>Imagine que o projeto está com a seguinte estrutura de diretórios:</p>
 	<p>
 		projeto/<br/>
@@ -31,7 +31,7 @@ title: Inserindo JS na página?
 	<pre class="lang-html prettyprint linenums">
 	&lt;script type="text/javascript" src="js/meu-arquivo.js"&gt;&lt;/script&gt;
 	</pre>
-	<p><b>Exemplo 2 - adicionando um JavaScript da internet:</b></p>
+	<h3>Exemplo 2 - adicionando um JavaScript da internet:</h3>
 	<p>Nesse exemplo, é carregado o <a href="o-que-framework.html"><i>framework</i></a> JavaScript <a href="o-que-jquery.html">jQuery</a> disponibilizado pela Google por um serviço de hospedagem de <i>libraries</i> (bibliotecas) JavaScript. Disponível em <a href="https://developers.google.com/speed/libraries/devguide?hl=pt-br#jquery" target="_blank">https://developers.google.com/speed/libraries/devguide?hl=pt-br#jquery</a>:</p>
 	<pre class="lang-html prettyprint linenums">
 	&lt;script 
@@ -39,7 +39,7 @@ title: Inserindo JS na página?
 		src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"&gt;
 	&lt;/script&gt;
 	</pre>
-	<p><b>Qual é o melhor local para colocar a <i>tag</i> <code>&lt;script&gt;</code>?</b></p>
+	<h2>Qual é o melhor local para colocar a <i>tag</i> <code>&lt;script&gt;</code>?</h2>
 	<p>No geral, o melhor local para ser inserida uma <i>tag</i> <code>&lt;script&gt;</code> é antes do fechamento da <i>tag</i> <code>&lt;body&gt;</code>. Isso se dá devido ao fato de que o browser, ao encontrar uma <i>tag</i> <code>&lt;script&gt;</code>, precisa executar o que foi específicado ou dentro da <i>tag</i> ou pelo atributo 'src', bloqueando assim a renderização do restante da página.</p>
 	<p>Assim, o código JavaScript é executado assim que é interpretado, logo, se existem elementos abaixo do código em questão que são manipulados por esse código (por exemplo, quer-se remover todos os links de uma determinada página e os links encontram-se abaixo da <i>tag</i> <code>&lt;script&gt;</code>), é necessário adicionar eventos indicando que a página já foi carregada completamente, caso contrário, é bem possível que o código não funcione corretamente. </p>
 </article>
