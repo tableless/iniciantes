@@ -5,7 +5,73 @@ title: Diferença de CLASS e ID
 {% include submenu-css.html %}
 
 <article class="content">
-	<h1>Qual a diferença entre CLASS e ID</h1>
-	<h2>Class é para muitos, ID é para um</h2>
-		<p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+	<h1>Qual a diferença entre CLASS e ID?</h1>
+		<p>Em HTML e CSS, há a possibilidade de aplicar estilos através de 'class' e 'id' e, em JavaScript é possível indentificar algum elemento de uma página por sua classe, id ou tag. Mas qual a diferença entre 'class' e 'id'?</p>
+
+    <h2>O que são classes?</h2>
+    <p>As classes são uma forma de identificar um grupo de elementos. Através delas, pode-se atribuir formatação a VÁRIOS elementos de uma vez. Exemplo:</p>
+
+    <p>Código CSS:</p>
+    <pre class="lang-css prettyprint linenums">
+      .classe1 {
+        background: blue;
+      }
+  </pre>
+
+  <p>Código HTML:</p>
+    <pre class="lang-html prettyprint linenums">
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang=&quot;pt-br&quot;&gt;
+        &lt;head&gt;
+          &lt;title&gt;&lt;/title&gt;
+          &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class=&quot;classe1&quot;&gt;Div1&lt;/div&gt;
+          &lt;div class=&quot;classe1&quot;&gt;Div2&lt;/div&gt;
+          &lt;div class=&quot;classe1&quot;&gt;Div3&lt;/div&gt;
+          &lt;div class=&quot;classe1&quot;&gt;Div4&lt;/div&gt;
+          &lt;div class=&quot;classe1&quot;&gt;Div5&lt;/div&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+  </pre>
+  <p>Então, todas as 'divs' que estiverem com a classe "classe1" estarão com um background azul(blue).</p>
+
+
+  <h2>O que são ids?</h2>
+    <p>As ids são uma forma de identificar um elemento, e devem ser ÚNICAS para cada elemento. É como se fossem impressões digitais de nossos dedos ou RGs. Através delas, pode-se atribuir formatação a um elemento em especial. Exemplo:</p>
+
+    <p>Código CSS:</p>
+    <pre class="lang-css prettyprint linenums">
+      #idUm {
+        background: blue;
+      }
+      #idDois {
+        background: yellow;
+      }
+      #idTres {
+        background: lightblue;
+      }
+      #idQuatro {
+        background: lightgreen;
+      }
+  </pre>
+
+  <p>Código HTML:</p>
+    <pre class="lang-html prettyprint linenums">
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang=&quot;pt-br&quot;&gt;
+        &lt;head&gt;
+          &lt;title&gt;&lt;/title&gt;
+          &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div id=&quot;idUm&quot;&gt;Div1&lt;/div&gt;
+          &lt;div id=&quot;idDois&quot;&gt;Div2&lt;/div&gt;
+          &lt;div id=&quot;idTres&quot;&gt;Div3&lt;/div&gt;
+          &lt;div id=&quot;idQuatro&quot;&gt;Div4&lt;/div&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;
+  </pre>
+  <p>Então, como mostra o código acima, não podemos repetir uma 'id'. Deve ser especialmente única para cada elemento.</p>
 </article>
