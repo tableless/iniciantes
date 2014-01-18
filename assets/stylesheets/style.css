@@ -227,6 +227,11 @@ article h3 {
 	padding-top: 15px;
 }
 
+article h4 {
+	font-weight: normal;
+	padding-top: 15px;
+}
+
 .box p,
 article p {
 	font-weight: 500;
@@ -255,6 +260,7 @@ article p,
 article h1,
 article h2,
 article h3,
+article h4,
 article li {
 	padding-left: 20px;
 	padding-right: 20px;
@@ -308,4 +314,21 @@ p code {
 .example h1 {
 	margin: 0;
 	padding: 0 20px;
+}
+dl {
+	overflow: hidden;
+	padding: 0 20px;
+}
+dt {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-radius: 5px 5px 0 0;
+	padding: 5px;
+}
+dd {
+	border: 1px solid #ccc;
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+	margin-bottom: 20px;
+	padding: 5px 5px 5px 20px;
 }
