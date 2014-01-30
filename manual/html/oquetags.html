@@ -7,5 +7,41 @@ title: O que são tags e atributos
 <article class="content">
 	<h1>O que são Tags, atributos e elementos?</h1>
 	<h2>Conhecendo as tags principais e quais seus atributos</h2>
+	<h3>O que são tags?</h3>
+	<p>Cada elemento é representado por uma tag. Cada tag tem seus atributos, e cada atributo tem sua especificação para valores.</p>
+	<p>Existem dois tipos de tags, as tags que necessitam de fechamento e as tags que não necessitam de fechamento.</p>
+	<p>Para as tags que necessitam de fechamento, utilizamos o sinal de menor ( <i>&lt;</i> ), seguido do nome do elemento e o sinal de maior ( <i>&gt;</i> ) para abertura. Para fechamento, utilizamos o sinal de menor ( <i>&lt;</i> ), seguido de barra ( <i>/</i> ), nome do elemento e o sinal de maior ( <i>&gt;</i> ).</p>
+	<pre class="lang-html prettyprint linenums">
+&lt;!-- Exemplo de elemento que necessita de fechamento --&gt;
+&lt;p&gt;A tag do elemento de parágrafo necessita de fechamento.&lt;/p&gt;
+</pre>
+	<p>Os elementos que não necessitam de fechamento, também conhecidos como <em>elementos vazios</em>, somente utilizamos o sinal de menor ( <i>&lt;</i> ), seguido do nome do elemento e o sinal de maior ( <i>&gt;</i> ).</p>
+	<pre class="lang-html prettyprint linenums">
+&lt;!-- Exemplo de elemento vazio --&gt;
+Texto utilizando&lt;br&gt;
+quebra de linha
+</pre>
+	<h3>E atributos?</h3>
+	<p>Atributos são informações que passamos na tag para que ela se comporte da maneira esperada. Existem atributos globais (que funcionam em todas as tags) e específicos (que são direcionados para cada tag, através de especificação).</p>
+	<h4>Atributos globais</h4>
+	<p>Seguem alguns atributos globais importantes e suas descrições simplificadas:</p>
+	<dl>
+		<dt>accesskey</dt>
+		<dd>Determina uma (ou mais) tecla(s) de atalho para o elemento. Para definir mais de uma tecla, coloque-as separadas por espaço.</dd>
+		<dt>class</dt>
+		<dd>Determina uma (ou mais) classe(s) para o elemento. Para definir mais de uma classe, coloque-as separadas por espaço.</dd>
+		<dt>hidden</dt>
+		<dd>Oculta o elemento onde for declarado.</dd>
+		<dt>id</dt>
+		<dd>É o identificador do elemento. Somente deve ser declarado um id por elemento. E este id não deve ser repetido na mesma página.</dd>
+		<dt>lang</dt>
+		<dd>Determina a língua em que está escrito o conteúdo do elemento.</dd>
+		<dt>style</dt>
+		<dd>Determina propriedades CSS diretamente no elemento.</dd>
+		<dt>tabindex</dt>
+		<dd>Organiza os elementos por ordem de tabulação. Deve-se usar valor numérico.</dd>
+		<dt>title</dt>
+		<dd>Representa um auxílio ao elemento. Semelhante a dica do elemento.</dd>
+	</dl>
 		<p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
 </article>
