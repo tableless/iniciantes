@@ -7,5 +7,48 @@ title: Seletores do CSS
 <article class="content">
 	<h1>Selecionando elementos</h1>
 	<h2>Entenda como formatar os elementos do CSS</h2>
+	<p>Seletores CSS ajudam a especificar melhor o elemento que deve ser afetado.</p>
+	<p>Vejamos alguns seletores:</p>
+	<dl>
+		<dt>Elemento Filho (A > B)</dt>
+		<dd>
+			<p>Para selecionar um elemento (B) que tenha um elemento pai específico (A), deve-se utilizar o "&gt;".</p>
+			<p>Ex.:
+<pre class="prettyprint lang-css linenums">
+nav.menu-principal > ul { padding: 0; } // neste caso, somente o elemento ul, que tem como pai um elemento nav com classe "menu-principal", receberá a alteração de preenchimento
+</pre>
+			</p>
+		</dd>
+		<dt>Elemento Irmão (A + B)</dt>
+		<dd>
+			<p>Quando um elemento (B) está ao lado de outro específico (A).</p>
+			<p>Ex.:
+<pre class="lang-css prettyprint linenums">
+label + input { border: 1px solid #333; } // todos os inputs que estiverem ao lado de um label receberão borda cinza
+</pre>
+			</p>
+		</dd>
+		<dt>Não este elemento (A:not(b))</dt>
+		<dd>
+			<p>Exclui determinado elemento (A) de acordo com a especificação (b).</p>
+<pre class="lang-css prettyprint linenums">
+div:not(.principal) { border: 1px solid #F00; } // todas as divs que não tenham a classe "principal" receberão borda vermelha
+</pre>
+		</dd>
+		<dt>Primeiro Filho (A:first-child)</dt>
+		<dd>
+			<p>Seleciona o primeiro elemento que aparecer, de acordo com o elemento definido (A).</p>
+<pre class="lang-css prettyprint linenums">
+li:first-child { background-color: #0F0; } // O primeiro li terá fundo verde
+</pre>
+		</dd>
+		<dt>Enésimo Elemento (A:nth-child(b))</dt>
+		<dd>
+			<p>Seleciona o elemento definido (A) de acordo com a posição informada (b).</p>
+<pre class="lang-css prettyprint linenums">
+li:nth-child(7) { background-color: #666; } // O sétimo li terá fundo cinza
+</pre>
+		</dd>
+	</dl>
 		<p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
 </article>
