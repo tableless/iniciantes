@@ -272,7 +272,7 @@ article ul {
 }
 article ul li {padding-left: 0	}
 
-article pre {margin: 20px 0;}
+article pre {margin: 20px 0; overflow-x: auto}
 
 p code {
 	font-weight: bold;
