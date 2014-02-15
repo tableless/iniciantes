@@ -332,3 +332,7 @@ dd {
 	margin-bottom: 20px;
 	padding: 5px 5px 5px 20px;
 }
+hr {
+	color: rgba(0,0,0,0.15);
+	margin: 20px 0;
+}
