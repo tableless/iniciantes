@@ -7,5 +7,100 @@ title: Propriedade Background
 <article class="content">
 	<h1>Propriedade Background</h1>
 	<h2>Inserindo fundo nos elementos</h2>
-		<p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+	<p>O background trata do fundo dos elementos. O elemento que mais recebe esta propriedade é o <i>body</i>.</p>
+	<p>Algumas das propriedades do background é:</p>
+	<dl>
+		<dt>color</dt>
+		<dd>
+			<p>Define a cor do fundo.</p>
+			<p>Possíveis valores:</p>
+			<ul>
+				<li><b>inherit</b>: Herda o valor do elemento pai.</li>
+				<li><b>transparent</b>: Define cor como transparente.</li>
+				<li><b>&lt;cor&gt;</b>: Define uma determinada cor.</li>
+			</ul>
+<pre class="lang-css prettyprint linenums">
+div {
+	background-color: gray;
+}
+</pre>
+		</dd>
+		<dt>image</dt>
+		<dd>
+			<p>Define a imagem de fundo.</p>
+			<p>Possíveis valores:</p>
+			<ul>
+				<li><b>inherit</b>: Herda o valor do elemento pai.</li>
+				<li><b>none</b>: Indica que não há imagem de fundo.</li>
+				<li><b>url()</b>: Define a localização da imagem de fundo.</li>
+			</ul>
+<pre class="lang-css prettyprint linenums">
+div {
+	background-image: url("../img/bg.png");
+}
+</pre>
+		</dd>
+		<dt>repeat</dt>
+		<dd>
+			<p>Define a posição de repetição da imagem de fundo.</p>
+			<p>Possíveis valores:</p>
+			<ul>
+				<li><b>inherit</b>: Herda o valor do elemento pai.</li>
+				<li><b>repeat</b>: Repete a imagem vertical e horizontalmente.</li>
+				<li><b>repeat-x</b>: Repete a imagem horizontalmente.</li>
+				<li><b>repeat-y</b>: Repete a imagem verticalmente.</li>
+				<li><b>no-repeat</b>: Não repete a imagem.</li>
+			</ul>
+<pre class="lang-css prettyprint linenums">
+div {
+	background-repeat: no-repeat;
+}
+</pre>
+		</dd>
+		<dt>attachment</dt>
+		<dd>
+			<p>Define se a imagem definida irá rolar juntamente com o viewport, ou se irá ficar fixo.</p>
+			<p>Possíveis valores:</p>
+			<ul>
+				<li><b>inherit</b>: Herda o valor do elemento pai.</li>
+				<li><b>fixed</b>: Mantém a imagem de fundo fixa na posição definida independente da rolagem do viewport.</li>
+				<li><b>scroll</b>: A imagem de fundo acompanha a rolagem do viewport.</li>
+			</ul>
+<pre class="lang-css prettyprint linenums">
+div {
+	background-attachment: fixed;
+}
+</pre>
+		</dd>
+		<dt>position</dt>
+		<dd>
+			<p>Define a posição da imagem de fundo. Observe que esta propriedade necessita de atenção de acordo com o <i>background-repeat</i> definido.</p>
+			<p>Possíveis valores:</p>
+			<ul>
+				<li><b>inherit</b>: Herda o valor do elemento pai.</li>
+				<li><b>&lt;porcentagem&gt;</b>: sendo <i>A</i> e <i>B</i> dois números, quando declaramos o position com <i>A</i>% e <i>B</i>%, a posição A,B da imagem ficará na posição <i>A</i>%, <i>B</i>% do elemento.</li>
+				<li><b>&lt;comprimento&gt;</b>: sendo <i>A</i> e <i>B</i> dois números, quando declaramos o position com <i>A</i>px e <i>B</i>px, a posição A,B da imagem ficará na posição <i>A</i>px, <i>B</i>px do elemento.</li>
+				<li><b>top</b>: Equivale a 0% na posição vertical.</li>
+				<li><b>bottom</b>: Equivale a 100% na posição vertical.</li>
+				<li><b>left</b>: Equivale a 0% na posição horizontal.</li>
+				<li><b>right</b>: Equivale a 100% na posição horizontal.</li>
+				<li><b>center</b>: Caso não tenha sido declarado um valor horizontal, equivale a 50% na posição horizontal, ou, caso não tenha sido declarado um valor vertical, equivale a 50% na posição vertical.</li>
+			</ul>
+<pre class="lang-css prettyprint linenums">
+div {
+	background-position: top center;
+}
+</pre>
+		</dd>
+		<dt>background</dt>
+		<dd>
+			<p>É uma propriedade abreviada que une todas as propriedades do background.</p>
+<pre class="lang-css prettyprint linenums">
+div {
+	background: gray url("../img/bg.png") no-repeat fixed top center;
+}
+</pre>
+		</dd>
+	</dl>
+	<p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
 </article>
