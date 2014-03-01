@@ -7,5 +7,36 @@ title: Propriedade Position
 <article class="content">
 	<h1>Propriedade Position</h1>
 	<h2>Posicionando elementos via coordenadas</h2>
+	<p>Determina a posição do elemento.</p>
+	<p>Possíveis valores:</p>
+	<dl>
+		<dt>relative</dt>
+		<dd>
+			<p>A posição do elemento é relativa ao elemento anterior.</p>
+<pre class="lang-css prettyprint linenums">
+aside {
+	position: relative;
+}
+</pre>
+		</dd>
+		<dt>fixed</dt>
+		<dd>
+			<p>A posição do elemento é relativa ao viewport. Esta posição não é influenciada pela rolagem da página.</p>
+<pre class="lang-css prettyprint linenums">
+aside {
+	position: fixed;
+}
+</pre>
+		</dd>
+		<dt>absolute</dt>
+		<dd>
+			<p>A posição do elemento é relativa ao viewport, ou ao elemento pai quando este tem um <i>position</i> definido. Esta posição é influenciada pela rolagem da página.</p>
+<pre class="lang-css prettyprint linenums">
+aside {
+	position: absolute;
+}
+</pre>
+		</dd>
+	</dl>
 		<p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
 </article>
