@@ -12,11 +12,11 @@ Como funciona
 ----------
 Utilizamos [Jekyll](http://jekyllrb.com) uma Gem do [Ruby](http://www.ruby-lang.org/) para gerar páginas estáticas.
 
-1. Instale o [Ruby](http://www.ruby-lang.org/pt/downloads/) 
+1. Instale o [Ruby](http://www.ruby-lang.org/pt/downloads/)
 
-2. Instale a Gem do [Jekyll](http://jekyllrb.com/):
+2. Instale a Gem do [Bundler](http://bundler.io/):
     ```
-    sudo gem install jekyll
+    gem install bundler
     ```
 3. Clone o projeto:
     ```
@@ -25,6 +25,10 @@ Utilizamos [Jekyll](http://jekyllrb.com) uma Gem do [Ruby](http://www.ruby-lang.
 4. Vá a pasta do projeto:
     ```
     cd iniciantes
+    ```
+5. Instale as dependências através do [Bundler](http://bundler.io/):
+    ```
+    bundle install
     ```
 5. Inicie o [Jekyll](http://jekyllrb.com/):
     ```
