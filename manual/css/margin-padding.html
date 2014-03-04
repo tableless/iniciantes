@@ -10,7 +10,6 @@ title: Propriedade Margin e Padding
   <h3>Margin</h3>
   <p>É a margem do elemento, ou seja, o espaçamento externo do elemento.</p>
   <p>Algumas formas de escrita:</p>
-
   <dl>
     <dt>margin-top</dt>
     <dd>
@@ -21,7 +20,6 @@ div {
 }
 </pre>
     </dd>
-
     <dt>margin-right</dt>
     <dd>
       <p>Define a margem direita do elemento.</p>
@@ -31,7 +29,6 @@ div {
 }
 </pre>
     </dd>
-
     <dt>margin-bottom</dt>
     <dd>
       <p>Define a margem inferior do elemento.</p>
@@ -41,27 +38,102 @@ div {
 }
 </pre>
     </dd>
-
     <dt>margin-left</dt>
     <dd>
       <p>Define a margem esquerda do elemento.</p>
 <pre class="lang-css prettyprint linenums">
 div {
-  margin-bottom: 40px;
+  margin-left: 40px;
 }
 </pre>
     </dd>
-
     <dt>margin</dt>
     <dd>
-      <p>Define a margem inferior do elemento.</p>
+      <p>Define a margem do elemento. Este tipo de declaração pode ser dar de diversas formas.</p>
 <pre class="lang-css prettyprint linenums">
-div {
-  margin-bottom: 20px;
+/* t = topo; d = direita; b = baixo; e = esquerda; */
+.div1 {
+  /* t = 20px; d = 20px; b = 20px; e = 20px; */
+  margin: 20px;
+}
+.div2 {
+  /* t = 10px; d = 20px; b = 10px; e = 20px; */
+  margin: 10px 20px;
+}
+.div3 {
+  /* t = 10px; d = 20px; b = 30px; e = 20px; */
+  margin: 10px 20px 30px;
+}
+.div4 {
+  /* t = 10px; d = 20px; b = 30px; e = 40px; */
+  margin: 10px 20px 30px 40px;
 }
 </pre>
     </dd>
-
   </dl>
-  <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+  <h3>Padding</h3>
+  <p>É o preenchimento do elemento, ou seja, o espaçamento interno do elemento.</p>
+  <p>Algumas formas de escrita:</p>
+  <dl>
+    <dt>padding-top</dt>
+    <dd>
+      <p>Define o preenchimento superior do elemento.</p>
+<pre class="lang-css prettyprint linenums">
+div {
+  padding-top: 10px;
+}
+</pre>
+    </dd>
+    <dt>padding-right</dt>
+    <dd>
+      <p>Define o preenchimento direito do elemento.</p>
+<pre class="lang-css prettyprint linenums">
+div {
+  padding-right: 20px;
+}
+</pre>
+    </dd>
+    <dt>padding-bottom</dt>
+    <dd>
+      <p>Define o preenchimento inferior do elemento.</p>
+<pre class="lang-css prettyprint linenums">
+div {
+  padding-bottom: 30px;
+}
+</pre>
+    </dd>
+    <dt>padding-left</dt>
+    <dd>
+      <p>Define o preenchimento esquerdo do elemento.</p>
+<pre class="lang-css prettyprint linenums">
+div {
+  padding-left: 40px;
+}
+</pre>
+    </dd>
+    <dt>padding</dt>
+    <dd>
+      <p>Define o preenchimento geral do elemento. Assim como na margem, o padding pode declarado de várias formas.</p>
+<pre class="lang-css prettyprint linenums">
+/* t = topo; d = direita; b = baixo; e = esquerda; */
+.div1 {
+  /* t = 20px; d = 20px; b = 20px; e = 20px; */
+  padding: 20px;
+}
+.div2 {
+  /* t = 10px; d = 20px; b = 10px; e = 20px; */
+  padding: 10px 20px;
+}
+.div3 {
+  /* t = 10px; d = 20px; b = 30px; e = 20px; */
+  padding: 10px 20px 30px;
+}
+.div4 {
+  /* t = 10px; d = 20px; b = 30px; e = 40px; */
+  padding: 10px 20px 30px 40px;
+}
+</pre>
+    </dd>
+  </dl>
+    <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
 </article>
