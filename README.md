@@ -32,7 +32,7 @@ Utilizamos [Jekyll](http://jekyllrb.com) uma Gem do [Ruby](http://www.ruby-lang.
     ```
 5. Inicie o [Jekyll](http://jekyllrb.com/):
     ```
-    jekyll serve
+    jekyll serve -w
     ```
 5. Acesse [http://localhost:4000/iniciantes/](http://localhost:4000/iniciantes/)
 
