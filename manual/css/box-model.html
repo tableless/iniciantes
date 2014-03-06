@@ -8,5 +8,126 @@ title: Box Model
   <h1>Box Model</h1>
   <h2>Entendendo como funciona elementos no HTML</h2>
 
-  <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+  <p>Sempre quando vamos estilizar algum elemento via CSS, é comum, e precisamos estar cientes, que alguma alteração que iremos fazer possa impactar em outros elementos. Isso fica fácil de compreender quando entendemos o conceito de box model.</p>
+
+  <p>Basicamente, a idéia do box model é composta por quatro partes:</p>
+  <ul>
+    <li>conteúdo</li>
+    <li>espaçamento</li>
+    <li>bordas</li>
+    <li>margens</li>
+  </ul>
+
+  <p>Resumindo, podemos dizer que o <strong>box model</strong> trata-se de como as 4 propriedades acima se relacionam para compor a dimensão do elemento.</p>
+
+  <img src="/iniciantes/assets/img/box-model.png" alt="Imagem demonstrando o conceito de box-model">
+
+<pre class="lang-css prettyprint linenums">
+.classe {
+    width: 50px;
+    height: 50px;
+    border: 1px solid gray;
+    padding: 10px 20px;
+}
+</pre>
+
+  <p>Se aplicarmos a classe acima em um elemento, ele vai ter as dimensões que setamos (<i>50 pixels de altura e largura</i>), certo? Errado. O elemento vai ser renderizado com <i>72 pixels de altura e 92 pixels de largura</i>. Isso acontece devido ao fato das propriedades <i>padding</i> e <i>border</i> serem somadas à largura e altura já definidas, aumentando as dimensões do elemento. Isso nos leva a ver que as propriedades <i>width</i> e <i>height</i> definem as dimensões do seu conteúdo e não do elemento como um todo.</p>
+
+  <dl>
+    <dt>Largura</dt>
+    <dd><p><strong>50</strong> (largura definida) + <br><strong>20</strong> (padding left) + <br><strong>20</strong> (padding right) + <br><strong>1</strong> (border left) + <br><strong>1</strong> (border right) => <strong>92</strong> pixels de largura</p></dd>
+  </dl>
+
+  <dl>
+    <dt>Altura</dt>
+    <dd><p><strong>50</strong> (largura definida) + <br><strong>10</strong> (padding top) + <br><strong>10</strong> (padding bottom) + <br><strong>1</strong> (border top) + <br><strong>1</strong> (border bottom) => <strong>72</strong> pixels de altura</p></dd>
+  </dl>
+
+  <p>Um exemplo prático pra vermos a dor de cabeça que você pode ter no seu dia a dia. Imagine que você precise ter um elemento que ocupe 100% da largura disponível. Mas também precisa que esse elemento tenha <i>10 pixels</i> de <i>padding</i> e uma borda de <i>1 pixel</i>.</p>
+
+<pre class="lang-css prettyprint linenums">
+.dor-de-cabeca {
+    width: 100%;
+    padding: 10px;
+    border: solid 1px gray;
+}
+</pre>
+
+  <p>Seu elemento com a classe <code>dor-de-cabeca</code> ultrapassa o limite de 100% que você tinha definido, provavelmente <i>quebrando</i> o layout. A nova largura dele é resultante da soma: 100% (largura definida) + 20 pixels (padding left e right) + 2 pixels (border left e right).</p>
+
+  <h3>A propriedade box-sizing</h3>
+
+  <p>Já vimos o tanto de facilidades que o <i>CSS3</i> trouxe para a vida dos desenvolvedores. Uma delas é a propriedade <code>box-sizing</code> que permite que mudemos o comportamento do box-model.</p>
+
+  <p>Por padrão, todos os elementos possuem o valor <code>content-box</code> para essa propriedade. Trata-se do que vimos nos exemplos acima: o box-model é definido apenas pelo conteúdo.</p>
+
+<pre class="lang-css prettyprint linenums">
+box-sizing: content-box;
+</pre>
+
+  <p>Um outro exemplo para exemplificar o box-model com o uso do <code>content-box</code>. Considere os elementos, abaixo:</p>
+
+<pre class="lang-css prettyprint linenums">
+.elemento1 {
+    background: #ddd;
+    width: 250px;
+    height: 50px;
+}
+
+.elemento2 {
+    background: #ddd;
+    width: 250px;
+    height: 50px;
+    padding: 0 50px;
+}
+</pre>
+
+  <img src="/iniciantes/assets/img/box-model-content-box.png" alt="Imagem demonstrando o valor content-box para a propriedade box-sizing e as diferenças no cálculo da largura de elementos">
+
+  <p>Os elementos são definidos com a mesma largura, mas como podemos ver na imagem acima, o <code>elemento2</code> é renderizado maior devido ao <code>padding</code>.</p>
+
+<h3>A solução border-box</h3>
+
+  <p>A propriedade <code>box-sizing</code> permite um novo valor que resolve todos os problemas apresentados nos exemplos anteriores:</p>
+
+<pre class="lang-css prettyprint linenums">
+    box-sizing: border-box;
+</pre>
+
+  <p>O que ela faz? Simples. Ela altera o comportamento do box-model, fazendo com que o navegador calcule a largura/altura do elemento contando não apenas o seu conteúdo (como visto no <code>content-box</code>), mas também considerando o <code>padding</code> (espaçamento) e <code>border</code> (borda) do elemento.</p>
+
+  <p>O exemplo anterior, com a aplicação do <code>border-box:</code></p>
+
+<pre class="lang-css prettyprint linenums">
+.elemento1,
+.elemento2 { box-sizing: border-box; }
+
+.elemento1 {
+    background: #ddd;
+    width: 250px;
+    height: 50px;
+}
+
+.elemento2 {
+    background: #ddd;
+    width: 250px;
+    height: 50px;
+    padding: 0 50px;
+}
+</pre>
+
+  <img src="/iniciantes/assets/img/box-model-border-box.png" alt="Imagem demonstrando o valor border-box para a propriedade box-sizing e o novo comportamento do box-model para o cálculo da largura de um elemento">
+
+  <h3>Suporte</h3>
+
+  <p>O  <a href="http://caniuse.com/#search=box-sizing">suporte</a> atual é bem grande, com mais de 90% (em torno de 77% com suporte parcial e 15% com suporte total), o que nos leva a utilizar os prefixos sempre que formos utilizar a propriedade.</p>
+
+<pre class="lang-css prettyprint linenums">
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+</pre>
 </article>
