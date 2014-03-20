@@ -80,9 +80,9 @@ header h2 {
 }
 .btn:hover {opacity: 0.9;}
 
-/*****
-****** SIDEBAR
-*****/
+/* -------------------------------------
+                 SIDEBAR
+--------------------------------------*/
 .sidebar {
   float: left;
   width: 225px;
@@ -133,9 +133,9 @@ header h2 {
   color: rgba(0,0,0,0.9);
 }
 
-/*****
-****** ARTICLE
-*****/
+/* -------------------------------------
+                 ARTICLE
+--------------------------------------*/
 .content {
   box-shadow: 0 0 7px 0px rgba(0,0,0,0.2);
   background: #FFF;
@@ -162,7 +162,6 @@ article.content {overflow: hidden;}
 
 article img {
     max-width: 100%;
-    margin: auto;
 }
 
 .box:before {
