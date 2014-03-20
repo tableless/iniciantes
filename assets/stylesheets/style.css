@@ -160,7 +160,10 @@ article.content {overflow: hidden;}
 
 .box:nth-child(even) {margin-right: 0;}
 
-article img {max-width: 100%;}
+article img {
+    max-width: 100%;
+    margin: auto;
+}
 
 .box:before {
   text-align: center;
