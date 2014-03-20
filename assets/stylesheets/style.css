@@ -162,6 +162,8 @@ article.content {overflow: hidden;}
 
 article img {
     max-width: 100%;
+    display: block;
+    margin: auto;
 }
 
 .box:before {
