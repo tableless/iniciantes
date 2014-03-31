@@ -7,5 +7,85 @@ title: Propriedade Float e Clear
 <article class="content">
   <h1>Propriedade Float e Clear</h1>
   <h2>Estruturando e flutuando elementos</h2>
-  <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+
+  <p>Algo comum ao lermos alguma matéria em revistas ou jornais é uma imagem relacionada ao texto estar posicionada de um lado e, o conteúdo textual contornar a imagem. Algo parecido com isso:</p>
+  <img src="/iniciantes/assets/img/float-left.png" alt="Representação de uma simulação de um layout clássico de revistas e jornais com uma foto do lado esquerdo e texto ao redor dela">
+  <p>E se precisássemos desenvolver um <i>template</i> parecido com a imagem acima. Provavelmente começaríamos com um código HTML assim:</p>
+  <pre class="lang-html prettyprint linenums">
+&lt;div&gt;
+  &lt;figure&gt;
+  	&lt;img src="img/imagem.jpg" alt="Imagem Xis"&gt;
+  	&lt;Legenda da imagem"&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugit, ipsam reprehenderit porro aperiam esse quibusdam ratione excepturi amet est.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugit, ipsam reprehenderit porro aperiam esse quibusdam ratione excepturi amet est.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugit, ipsam reprehenderit porro aperiam esse quibusdam ratione excepturi amet est. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugit, ipsam reprehenderit porro aperiam esse quibusdam ratione excepturi amet est&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<p>O que teríamos seria algo assim:</p>
+<img src="/iniciantes/assets/img/exemplo-sem-float.png" alt="Representação mostrando uma imagem no topo e um bloco de texto abaixo dela">
+<p>Por que isso? O que acontece é que a tag <code>figure</code> ocupa toda a largura da página e entra no empilhamento do documento/página, o que não permite que outros elementos apareçam ao seu lado.</p>
+<p>É aí que entra o <i>float</i>. Em resumo, essa propriedade permite que tiremos um elemento do fluxo vertical da página e automaticamente faz com que o conteúdo que venha a seguir <i>flutue</i> ao seu redor.</p>
+<p>O <i>CSS</i> ficaria assim:</p>
+<pre class="lang-css prettyprint linenums">
+figure {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+</pre>
+<p>O que fizemos foi <i>flutuar</i> a tag <code>figure</code> para o lado esquerdo e, colocar uma margem inferior e direita para que os parágrafos não fiquem grudados na imagem. Com isso conseguiríamos reproduzir um layout igual ao da primeira imagem. Poderíamos até variar e colocar nossa imagem do lado direito:</p>
+<pre class="lang-css prettyprint linenums">
+figure {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+</pre>
+<p>Aqui mudamos a direção que a tag <code>figude</code> vai flutuar e alteramos a margem do lado direito para o lado esquerdo. E teríamos um resultado assim:</p>
+<img src="/iniciantes/assets/img/float-right.png" alt="Representação simulando um layout clássico de revistas e jornais com uma foto do lado direito e texto ao redor dela">
+<h3>A propriedade <i>clear</i></h3>
+<p>Continuando com o nosso exemplo anterior, imagine que agora precisássemos inserir um novo título com mais parágrafos abaixo da imagem. Algo parecido com isso: (para fins de exemplo, diminui o conteúdo textual ao redor da imagem)</p>
+<img src="/iniciantes/assets/img/propriedade-clear.png" alt="Representação de um layout com imagem localizada no topo esquerdo com parágrafos ao redor dela e um título com mais parágrafos no fluxo da página">
+<p>Para representar esse conteúdo, teríamos um <i>HTML</i> semelhante a esse:</p>
+  <pre class="lang-html prettyprint linenums">
+&lt;div&gt;
+  &lt;figure&gt;
+    &lt;img src="img/imagem.jpg" alt="Imagem Xis"&gt;
+    &lt;Legenda da imagem"&lt;/figcaption&gt;
+  &lt;/figure&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugit, ipsam reprehenderit porro aperiam esse quibusdam ratione excepturi amet est.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugit, ipsam reprehenderit porro aperiam esse quibusdam ratione excepturi amet est.&lt;/p&gt;
+  &lt;h3&gt;Novo título&lt;/h3&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugit, ipsam reprehenderit porro aperiam esse quibusdam ratione excepturi amet est.&lt;/p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, fugit, ipsam reprehenderit porro aperiam esse quibusdam ratione excepturi amet est.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+<p>No entanto, chegaríamos num resultado assim:</p>
+<img src="/iniciantes/assets/img/exemplo-sem-clear.png" alt="Representação de um layout com imagem localizada no topo esquerdo com conteúdo textual ao redor dela">
+<p>Por que isso? Como definimos que a tag <code>figure</code> flutuaria à esquerda, saindo assim do fluxo vertical da página, todo conteúdo que vem após ela começa a preencher o espaço ao redor da imagem. O que acontece é que os parágrafos que vem logo após a tag <code>figure</code> são menores que a altura da imagem, fazendo com que o título (tag <code>h3</code>) ao invés de ser renderizada abaixo da imagem, apareça ao lado dela e seguindo o fluxo do documento.</p>
+<p>É aí que entra a propriedade <i>clear</i>. Ela tem a função de controlar o comportamento de elementos que apareçam no fluxo do documento após determinado elemento que possue a propriedade <i>float</i>. Em outras palavras, ela especifica se um elemento deve ser posicionado ao de elementos com <i>float</i> ou se devem ser colocados abaixo deles. A propriedade aceita 4 valores: </p>
+<ul>
+  <li><b>left</b>: Elemento é empurrado para baixo de elementos com <i>float left</i>;</li>
+  <li><b>right</b>: Elemento é empurrado para baixo de elementos com <i>float right</i>;</li>
+  <li><b>both</b>: Elemento é empurrado para baixo de elementos com <i>float left ou right</i>;</li>
+  <li><b>none</b>: Elemento não é empurrado para baixo de elementos com <i>float</i>.</li>
+</ul>
+<p>O <i>CSS</i> ficaria assim:</p>
+<pre class="lang-css prettyprint linenums">
+figure {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+h3 { clear: both; }
+/* Pelo fato da tag figure utilizar float left, aqui também poderíamos usar clear: left; */
+</pre>
+<p>E com isso, conseguiríamos fazer com que o título (tag <code>h3</code>) fosse empurrado para baixo, sendo renderizado abaixo da tag <code>figure</code> e ficando igual ao layout que queríamos.</p>
+<h3>Mais exemplos</h3>
+<p>Esse foi apenas um exemplo da utilização da propriedade <i>float</i>. Outros casos que você pode ver em vários websites são:</p>
+<dl>
+  <dt>Menus de navegação</dt>
+  <dd><p><i>Float</i> usado nos itens da lista. Mais precisamente em cada <code>li</code>, para dispor os itens do menu na horizontal.</p></dd>
+  <dt>Grids</dt>
+  <dd><p><i>Float</i> usado para dividir partes do grid. Por exemplo, colocar um bloco de conteúdo à esquerda e um outro bloco à direita.</p></dd>
+</dl>
 </article>
