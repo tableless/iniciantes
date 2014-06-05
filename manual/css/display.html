@@ -7,5 +7,29 @@ title: Propriedade Display
 <article class="content">
   <h1>Propriedade Display</h1>
   <h2>Entendendo e manipulando o fluxo dos elementos</h2>
-  <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+
+  <p>Entender a propriedade <code>display</code> é fundamental para que possamos compreender o fluxo e estruturação de uma página web. Todos os elementos por padrão já possuem um valor para a propriedade e, geralmente estas são <code>block</code> ou <code>inline</code>.</p>
+
+  <p>Essa propriedade CSS especifica o tipo de renderização do elemento na página. Uma definição que pode auxiliar no entendimento da propriedade é a do <a href="https://twitter.com/chriscoyier">Chris Coyier</a>, bastante reconhecido no mundo do CSS, que é a seguinte: </p>
+
+  <p><i>Todo elemento em uma página web é renderizado como uma caixa retangular. A propriedade <code>display</code> de CSS vai determinar como essa caixa vai ser comportar</i></p>
+
+  <h3>Os possíveis tipos</h3>
+
+  <h4>Block</h4>
+  <p>O elemento se comporta como um bloco. Ocupando praticamente toda a largura disponível na página. Elementos de parágrafo (<code>p</code>) e título(<code>h1</code>, <code>h2</code>, ...) possuem esse comportamento por padrão.</p>
+
+  <h4>Inline</h4>
+  <p>O elemento se comporta como um elemento em linha. Exemplos de elemento que se comportam assim são por exemplo as tags <code>span</code> e <code>a</code>.</p>
+
+  <h4>None</h4>
+  <p>Ao contrários dos valores atuais, o valor <code>none</code> permite, informalmente dizendo, que você <i>desative a propriedade do elemento</i>. Quando você utiliza essa propriedade, o elemento e todos seus elementos filhos não são renderizados na página.</p>
+
+  <p>Uma coisa importante a ressaltar que a propriedade <code>display: none</code> não é a mesma coisa da propriedade <code>visibility: hidden</code>. Nessa última o elemento não aparece na tela mas é renderizado na página, ou seja, vemos um <i>espaço vazio</i> no lugar do elemento; já a propriedade <code>display: none</code> não renderiza o elemento e, o espaço que era ocupado por ele, é ocupado pelo elemento seguinte no fluxo do documento.</p>
+
+  <h4>Table</h4>
+  <p>O elemento se comporta como uma tabela.</p>
+
+  <h4>Inline-block</h4>
+  <p>Semelhante ao <code>inline</code>, no entanto, ao definirmos <code>inline-block</code> em um elemento, conseguimos definir as propriedades de largura e altura para ele. Coisa que não conseguimos em um elemento com <code>display: inline</code>.</p>
 </article>
