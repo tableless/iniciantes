@@ -18,8 +18,12 @@ input[type="email"] { ... }
     <p>No exemplo acima, selecionamos respectivamente elementos <code>input</code> do tipo <i>text</i> e <i>email</i>.</p>
 
     <h4>Input checkbox</h4>
-<pre class="lang-css prettyprint linenums">input[type=”checkbox”]:checked { ... }</pre>
+<pre class="lang-css prettyprint linenums">input[type="checkbox"]:checked { ... }</pre>
     <p>A própria declaração é bem intuitiva. Seleciona elementos do tipo <i>checkobx</i> que estiverem selecionado (ou <i>ticados</i>).</p>
+
+    <h4>Input inativo</h4>
+<pre class="lang-css prettyprint linenums">input:disabled { ... }</pre>
+    <p>Acima, selecionamos um input que esteja com o atributo <code>disabled</code>, estando assim inativo.</p>
 
     <h3>Selecionamento elementos pela extensão do arquivo</h3>
 
@@ -34,31 +38,31 @@ a[href$=".pdf"] { ... }
     <p>Imagine uma lista de arquivos e que você precisa adicionar um ícone ou aplicar um estilo diferente de acordo com o tipo de arquivo em cada link. Com os seletores acima você consegue sem a necessidade de adicionar uma classe para cada um.</p>
 
     <h3>Selecionando elementos pelo <i>target</i></h3>
-
 <pre class="lang-css prettyprint linenums">#element-id:target { ... }</pre>
-
-    <p>Elementos com âncora linkam o usuário a outras partes da página. Então o elemento acima seria selecionado quando o usuário quando seu <i>id</i> aparecesse na <i>URL</i> do usuário. Geralmente depois de um clique.</p>
-
+    <p>Elementos com âncora linkam o usuário a outras partes da página. Então o elemento acima seria selecionado quando seu <i>id</i> aparecesse na <i>URL</i> do usuário. Geralmente depois de um clique.</p>
 
     <h3>Selecionando elementos pelo atributo</h3>
-
     <p>Existem seis maneiras diferentes de selecionarmos elementos por seus atributos:</p>
-
 <pre class="lang-css prettyprint linenums">[att=valor]</pre>
-<p>O atributo tem exatamente o mesmo valor especificado.</p>
+    <p>O atributo tem exatamente o mesmo valor especificado.</p>
 
 <pre class="lang-css prettyprint linenums">[att~=valor]</pre>
-<p>O valor do atributo precisar ser uma lista de valores com espaço. Por exemplo <code>class="box box-color box-sidebar"</code>, e um dos valores precisa ser exatamente igual ao valor que foi especificado.</p>
+    <p>O valor do atributo precisar ser uma lista de valores com espaço. Por exemplo <code>class="box box-color box-sidebar"</code>, e um dos valores precisa ser exatamente igual ao valor que foi especificado.</p>
 
 <pre class="lang-css prettyprint linenums">[att|=valor]</pre>
-<p>O atributo possui exatamente o mesmo valor que foi especificado ou é imediatamente seguindo de um traço. Dessa maneira, uma classe válida seria <code>valor-X</code>.</p>
+    <p>O atributo possui exatamente o mesmo valor que foi especificado ou é imediatamente seguindo de um traço. Dessa maneira, uma classe válida seria <code>valor-X</code>.</p>
 
 <pre class="lang-css prettyprint linenums">[att^=valor]</pre>
-<p>O valor do atributo começa com o valor que foi especificado na regra.</p>
+    <p>O valor do atributo começa com o valor que foi especificado na regra.</p>
 
 <pre class="lang-css prettyprint linenums">[att$=valor]</pre>
-<p>O valor do atributo termina com o valor que foi especificado na regra.</p>
+    <p>O valor do atributo termina com o valor que foi especificado na regra.</p>
 
 <pre class="lang-css prettyprint linenums">[att*=valor]</pre>
-<p>O valor do atributo contém o valor do atributo especificado na regra.</p>
+    <p>O valor do atributo contém o valor do atributo especificado na regra.</p>
+
+    <h3>Selecionando elementos pela negação</h3>
+<pre class="lang-css prettyprint linenums">div:not(.estilo) { ... }</pre>
+    <p>Acima, selecionamos todas as <code>divs</code> do documento, <i>exceto</i> as que possuem a classe <code>.estilo</code>.</p>
+
 </article>
