@@ -7,5 +7,39 @@ title: O que é jQuery?
 <article class="content">
   <h1>O que é jQuery?</h1>
   <h2>É um framework JavaScript</h2>
+  <p>Lançada em 2006, por <a href="https://twitter.com/jeresig">John Resig</a>, jQuery, segundo definição consta em seu site, trata-se de uma rápida, pequena e rica em <i>features</i> biblioteca JavaScript.</p>
+  <p>Como o lema <i>"Write less, do more."</i> (escreva menos, faça mais), jQuery revolucionou o desenvolvimento web, sendo presente em inúmeros projetos atualmente.</p>
+  <h3>Mas, por que é tão utilizado?</h3>
+  <p>Exatamente pelo seu lema. Com jQuery é possível fazer diversos efeitos com poucas linhas e, que custariam dezenas de linhas em JavaScript puro.</p>
+  <p>Alguns recursos oferecidos facilmente pelo jQuery:</p>
+  <ul>
+  	<li>Seleção e manipulação de elementos HTML</li>
+  	<li>Manipulação de CSS</li>
+  	<li>Efeitos e animações</li>
+  	<li><i>Navegação</i> pelo DOM</li>
+  	<li>Ajax</li>
+  	<li>Eventos</li>
+  </ul>
+  <h3>Como uso?</h3>
+  <p>Igualmente qualquer arquivo JavaScript você precisa inseri-lo na página com as tags <code>script</code>. Você pode fazer o link para uma CDN como a do <a href="https://developers.google.com/speed/libraries/devguide?hl=pt-br#jquery">Google</a> ou fazer o download do framework no seu projeto e linkar direto (vale lembrar que se optar por essa opção, faça o link para a versão <b>minificada</b>).</p>
+<pre class="lang-html prettyprint linenums">
+&lt;script&gt; src="js/jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+  <h3>A sintaxe</h3>
+  <p>A sintaxe básica é a seguinte:</p>
+<pre class="lang-html prettyprint linenums">$(seletorHTML).acao();</pre>
+  <h3>Alguns exemplos práticos</h3>
+  <h4>Manipulação HTML</h4>
+  <pre class="lang-html prettyprint linenums">$( "#botao" ).html( "Sucesso!" )</pre>
+  <p>No exemplo acima, selecionamos o elemento com <i>ID</i> botão e inserimos a <i>string</i> "Sucesso!".</p>
+  <h4>Eventos</h4>
+<pre class="lang-html prettyprint linenums">
+var box = $( "#box" );
+$( "#botao" ).on( "click", function( event ) {
+  box.show();
+});
+</pre>
+  <p>No <i>snippet</i> acima, guardarmos em uma <a href="variaveis.html">variável</a> o elemento com <i>ID</i> box. Em seguida, adicionao ao elemento com <i>ID</i> 'botao' o evento do <i>clique</i>. Ao ser disparado, esse evento mostra o elemento, que guardarmos na variável box anteriormente, através do método <code>show()</code>.</p>
+
   <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
 </article>
