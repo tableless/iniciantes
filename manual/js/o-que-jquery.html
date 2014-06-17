@@ -27,13 +27,13 @@ title: O que é jQuery?
 </pre>
   <h3>A sintaxe</h3>
   <p>A sintaxe básica é a seguinte:</p>
-<pre class="lang-html prettyprint linenums">$(seletorHTML).acao();</pre>
+<pre class="lang-javascript prettyprint linenums">$('seletorHTML').acao();</pre>
   <h3>Alguns exemplos práticos</h3>
   <h4>Manipulação HTML</h4>
-  <pre class="lang-html prettyprint linenums">$( "#botao" ).html( "Sucesso!" )</pre>
+  <pre class="lang-javascript prettyprint linenums">$( "#botao" ).html( "Sucesso!" )</pre>
   <p>No exemplo acima, selecionamos o elemento com <i>ID</i> botão e inserimos a <i>string</i> "Sucesso!".</p>
   <h4>Eventos</h4>
-<pre class="lang-html prettyprint linenums">
+<pre class="lang-javascript prettyprint linenums">
 var box = $( "#box" );
 $( "#botao" ).on( "click", function( event ) {
   box.show();
