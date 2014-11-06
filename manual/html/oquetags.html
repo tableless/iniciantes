@@ -5,27 +5,53 @@ title: O que são tags e atributos
 {% include submenu-html.html %}
 
 <article class="content">
-  <h1>O que são Tags, atributos e elementos?</h1>
-  <h2>Conhecendo as tags principais e quais seus atributos</h2>
+  <h1>O que são Tags, Elementos e Atributos?</h1>
+  <h2>Conhecendo as principais Tags, Elementos e seus Atributos</h2>
 
-  <h3>O que são tags?</h3>
-  <p>Cada elemento é representado por uma tag. Cada tag tem seus atributos, e cada atributo tem sua especificação para valores.</p>
-  <p>Existem dois tipos de tags, as tags que necessitam de fechamento e as tags que não necessitam de fechamento.</p>
-  <p>Para as tags que necessitam de fechamento, utilizamos o sinal de menor ( <i>&lt;</i> ), seguido do nome do elemento e o sinal de maior ( <i>&gt;</i> ) para abertura. Para fechamento, utilizamos o sinal de menor ( <i>&lt;</i> ), seguido de barra ( <i>/</i> ), nome do elemento e o sinal de maior ( <i>&gt;</i> ).</p>
-<pre class="lang-html prettyprint linenums">
-&lt;!-- Exemplo de elemento que necessita de fechamento --&gt;
-&lt;p&gt;A tag do elemento de parágrafo necessita de fechamento.&lt;/p&gt;
-</pre>
+  <h3>O que são Tags?</h3>
+  <p>Tags são o conjunto de caracteres que formam um elemento, ou seja, quando nos referenciamos à Tag "p" estamos falando disso: &lt;p&gt;</p>
+  <p>Existem dois tipos de Tags, as que necessitam de fechamento e as que não necessitam de fechamento.</p>
+  <p>Para as que necessitam de fechamento, utilizamos o sinal de menor ( <i>&lt;</i> ), seguido do nome do elemento e o sinal de maior ( <i>&gt;</i> ) para abertura. Para fechamento, utilizamos o sinal de menor ( <i>&lt;</i> ), seguido de barra ( <i>/</i> ), nome do elemento e o sinal de maior ( <i>&gt;</i> ).</p>
+
+  <pre class="lang-html prettyprint linenums">
+    &lt;!-- Exemplo de elemento que necessita de fechamento --&gt;
+    &lt;p&gt;A tag do elemento de parágrafo necessita de fechamento.&lt;/p&gt;
+  </pre>
+
   <p>Os elementos que não necessitam de fechamento, também conhecidos como <em>elementos vazios</em>, somente utilizamos o sinal de menor ( <i>&lt;</i> ), seguido do nome do elemento e o sinal de maior ( <i>&gt;</i> ).</p>
 
-<pre class="lang-html prettyprint linenums">
-&lt;!-- Exemplo de elemento vazio --&gt;
-Texto utilizando&lt;br&gt;
-quebra de linha
-</pre>
+  <pre class="lang-html prettyprint linenums">
+    &lt;!-- Exemplo de elemento vazio --&gt;
+    Texto utilizando&lt;br&gt;
+    quebra de linha
+  </pre>
 
-  <h3>E atributos?</h3>
-  <p>Atributos são informações que passamos na tag para que ela se comporte da maneira esperada. Existem atributos globais (que funcionam em todas as tags) e específicos (que são direcionados para cada tag, através de especificação).</p>
+  <h3>O que são Elementos?</h3>
+  <p>Elementos são formados a partir de Tags e entre as Tags é que está o conteúdo do Elemento.</p>
+  <p>Se quisermos exibir um parágrafo em um site utilizamos a Tag &lt;p&gt; que semanticamente quer dizer que o conteúdo que se espera nesse Elemento é um parágrafo. </p>
+
+  <p>Alguns exemplos:</p>
+
+  <pre class="lang-html prettyprint linenums">
+    &lt;!-- A Tag &lt;label&gt; define que o conteúdo do Elemento é uma label (rótulo)  --&gt;
+    &lt;label&gt;Informe o seu nome&lt;/label&gt;
+  </pre>
+
+  <pre class="lang-html prettyprint linenums">
+    &lt;!-- A Tag &lt;address&gt; define que o conteúdo do Elemento é um endereço (endereços físicos à virtuais)  --&gt;
+    &lt;address&gt;
+      Este guia é uma iniciativa da comunidade e do Tableless &lt;a href="http://tableless.com.br/contato">www.tableless.com.br&lt;/a&gt;
+    &lt;/address&gt;
+  </pre>
+
+  <h3>Não confunda Tags com Elementos</h3>
+  <p>As Tags servem para marcar onde começam e terminam os Elementos. Já os Elementos são uma parte conceitual/semântica que têm um começo e fim determinados.</p>
+  <p>Parece uma diferença boba, mas mantenha ela sempre em mente e isso vai fazer toda a diferença no seu entendimento de HTML.</p>
+
+  <h3>O que são Atributos?</h3>
+  <p>Atributos são informações que passamos na Tag para que ela se comporte da maneira esperada. Existem atributos globais (que funcionam em todas as Tags) e específicos (que são direcionados para cada Tag, através de especificação).</p>
+  <p>Os Atributos possuem nome e um valor, existem Atributos que você vai usar praticamente sempre e existem outros que serão mais raros.</p>
+
   <h4>Atributos globais</h4>
   <p>Seguem alguns atributos globais importantes e suas descrições simplificadas:</p>
   <dl>
@@ -56,5 +82,27 @@ quebra de linha
     <dt>title</dt>
     <dd><p>Representa um auxílio ao elemento. Semelhante a dica do elemento.</p></dd>
   </dl>
-  <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+  <p>Como você pôde ver, a sintaxe de Atributos é muito simples, porém, por mais simples que seja é sempre bom ter em mente boas práticas para que se tenha qualidade e fácil manutenção em seu HTML.</p>
+  <p>Existem Atributos em que os valores não precisam ser passados entre aspas, mas manter um padrão ajuda você e ajuda quem quer que seja que no futuro tenha que trabalhar com o seu HTML. Portanto, não é uma regra mas uma boa prática você envolver os valores dos Atributos entre aspas.</p>
+
+  <pre class="lang-html prettyprint linenums">
+    &lt;!-- Isso funciona, mas não é recomendável --&gt;
+    &lt;a href="http://tableless.com.br">www.tableless.com.br target=_blank&lt;/a&gt;
+
+    &lt;!-- Isso funciona e é recomendável --&gt;
+    &lt;a href="http://tableless.com.br">www.tableless.com.br target="_blank"&lt;/a&gt;
+  </pre>
+
+  <h4>Na prática</h4>
+  <p>Agora que você entendeu separadamente o papel das Tags, Elementos e Atributos, vamos ver um exemplo prático:</p>
+
+  <pre class="lang-html prettyprint linenums">
+    &lt;!-- A Tag &lt;img&gt; define que o conteúdo do Elemento é uma imagem e os atributos que utilizamos são <em>src</em> e <em>alt</em> --&gt;
+    &lt;img src="logo.png" alt="HTML 5 Logo" /&gt;
+  </pre>
+  
+  <h5>Analisando o exemplo:</h5>
+  <p>No exemplo acima definimos o caminho onde está a imagem com o Atributo <em>src</em> e utilizamos o Atributo <em>alt</em> para descrever que imagem é essa (a utilização do atributo alt é altamente recomendado, pois, mesmo que a imagem não seja carregada por qualquer motivo, o usuário conseguirá identificar que ali era para ser carregado o logo do HTML5). </p>
+  
+  <p>Fácil, não? Para saber quais Tags existem e como podem ser utilizadas, acesse a documentação do Mozilla clicando <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element" target="_blank">aqui</a></p>
 </article>
