@@ -63,4 +63,18 @@ var  gaveteiro = [10,20,30];
 novoGaveteiro = gaveteiro.slice(1,3);
 console.log(novoGaveteiro); //[20, 30]
 </pre>
+
+  <p><b>Quantidade de elementos do array</b></p>
+  <p>Depois de ter adicionado vários gaveteiros, pode surgir a necessidade de saber quantos já existem, para isso vamos acessar a propridade <i>length</i>: </p>
+<pre class="lang-javascript linenums prettyprint">
+var  gaveteiro = [1,2,3,10,20,30];
+console.log(gaveteiro.length); //6
+gaveteiro.push(100);
+gaveteiro.push(200);
+gaveteiro.push(300);
+gaveteiro.push(400);
+console.log(gaveteiro.length); //10
+gaveteiro.push(200);
+console.log(gaveteiro.length); //9
+</pre>
 </article>
