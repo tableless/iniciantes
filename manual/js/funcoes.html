@@ -18,9 +18,9 @@ title: Funções
 
   <h2>Resolvendo problemas</h2>
 
-  <p>Sempre que formos programar em qualquer linguagem, temos que ter em mente uma coisa muito importante: <em>"o melhor jeito de resolver um problema grande é dividir esse problema em probleminhas menores"</em>, cada um desses "probleminhas menores" serão tratados por funções nossas assim, juntando as várias pequenas funções, teremos resolvido "o todo".</p>
+  <p>Sempre que estivermos programando em qualquer linguagem, temos que ter em mente uma coisa muito importante: <em>"o melhor jeito de resolver um problema grande é dividi-lo em probleminhas menores"</em>, cada um desses "probleminhas menores" serão resolvidos por funções pequenas, assim juntando as várias pequenas funções, teremos resolvido "o todo".</p>
 
-  <p>Apesar de ser possível escrever todo o código que resolve o problema grande numa única função gigante, isso tornaria muito complexo nosso código, dificultaria uma futura manutenção e impossibilitaria o reaproveitamento de pequenas rotinas. Por isso que preferimos dividir e depois criar uma função grande que utilize nossas outras funções pequenas, do que escrever tudo num só lugar.</p>
+  <p>Apesar de ser possível escrever todo o código que resolve o problema grande numa única função gigante, não fazemos isso. Pois isso tornaria muito complexo nosso código, dificultaria uma futura manutenção e impossibilitaria o reaproveitamento de pequenas rotinas.</p>
 
   <h2>Declarando</h2>
 
@@ -41,7 +41,7 @@ function foo() {
 foo();
 </pre>
 
-  <p>Experimente declarar salvar um arquivo .html e abrir com o seu navegador, contendo o seguinte código:</p>
+  <p>Experimente salvar um arquivo .html e abrir com o seu navegador, contendo o seguinte código:</p>
 <pre class="lang-html linenums prettyprint">
 &lt;script>
 function bar() {
@@ -70,5 +70,22 @@ bar();
 function somar(x, y) {
   return x + y;
 }
+</pre>
+  <p>E para invocar essa função <code>somar()</code> podemos passar quaisquer dois números:</p>
+<pre class="lang-javascript linenums prettyprint">
+somar(3, 5);
+somar(1, 2);
+somar(10, 32);
+</pre>
+  <p>Só que não vermos nada, pois não direcionamos o <code>return</code> para lugar nenhum.</p>
+
+<pre class="lang-javascript linenums prettyprint">
+&lt;p id="resultado">&lt;/p>
+&lt;p id="resultado2">&lt;/p>
+&lt;script>
+alert(somar(3, 5));
+document.getElementById('resultado').innerHTML = somar(1, 2);
+document.getElementById('resultado2').innerHTML = somar(10, 32);
+&lt;/script>
 </pre>
 </article>
