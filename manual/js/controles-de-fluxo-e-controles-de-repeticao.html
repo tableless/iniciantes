@@ -1,0 +1,149 @@
+---
+layout: interna
+title: Controles de Fluxo e Controles de Repetição
+---
+{% include submenu-js.html %}
+
+<article class="content">
+  <h1>Declarações (Statements)</h1>
+  <h2>Entendendo Controles de Fluxo e Controles de Repetição</h2>
+
+  <h2>Controles de Fluxo</h2>
+  <p>São comandos da linguagem que permitem desviar o fluxo do programa, dependendo de um teste.</p>
+
+  <h3>IF</h3>
+  <p>A sintaxe do if é a seguinte:</p>
+<pre class="lang-javascript linenums prettyprint">
+if (&lt;teste>) {
+  &lt;código a ser executado caso o teste seja verdadeiro>
+}
+</pre>
+
+  <p>Podemos, por exemplo, executar um trecho do código unicamente se uma variavel nossa for maior do que dez.</p>
+<pre class="lang-javascript linenums prettyprint">
+var x = 11;
+if (x > 10) {
+  console.log('x é maior do que dez, corram para as colinas!');
+}
+</pre>
+
+  <p>Note, que o console.log não apareceria caso o valor de x fosse 10, 9, 8...</p>
+<pre class="lang-javascript linenums prettyprint">
+var x = 9;
+if (x > 10) {
+  console.log('x é maior do que dez, corram para as colinas!');
+}
+console.log('Serei executado independente do if ser true ou false');
+</pre>
+
+  <h3>ELSE</h3>
+  <p>o else não existe sem o if, pois ele não testa nada. Só é executado caso o teste do if retorne falso.</p>
+<pre class="lang-javascript linenums prettyprint">
+var x = 9;
+if (x > 10) {
+  console.log('x é maior do que dez, corram para as colinas!');
+} else {
+  console.log('Está tudo bem, podemos ficar tranquilos.');
+}
+</pre>
+
+  <h3>SWITCH</h3>
+  <p>O switch é uma estrutura para testes simples, muito usado quando temos que testar uma mesma condição diversas vezes, pois é mais legível do que uma cadeia de else if.</p>
+<pre class="lang-javascript linenums prettyprint">
+var tinta = 'azul';
+switch (tinta) {
+  case 'azul':
+    console.log('Irei pintar o carro de azul');
+    break;
+  case 'amarela':
+    console.log('Vou pintar a casa de amarelo');
+    break;
+  case 'verde':
+    console.log('Vou pintar o chão da garagem de verde');
+    break;
+  default:
+    console.log('Não vou pintar nada');
+    break;
+}
+</pre>
+
+  <p>Note que para cada uma das cores, eu farei uma coisa completamente diferente da outra. Caso a tinta seja verde, eu vou pintar o chão da garagem, mas se a tinha for amarela, irei pintar a casa.</p>
+
+  <p>Se fossemos reescrever esses testes com elseif, ficaria assim:</p>
+<pre class="lang-javascript linenums prettyprint">
+var tinta = 'azul';
+
+if (tinta === 'azul') {
+  console.log('Irei pintar o carro de azul');
+} else if(tinta === 'amarela') {
+  console.log('Vou pintar a casa de amarelo');
+} else if (tinta === 'verde') {
+  console.log('Vou pintar o chão da garagem de verde');
+} else {
+  console.log('Não vou pintar nada');
+}
+</pre>
+  <p>Fica melhor com o switch, ne?!</p>
+
+  <h2>Laços de repetição (loops)</h2>
+  <p>Se existe uma coisa que os computadores são muito bons é em executar algo várias vezes. Desde que saibamos o que queremos que o computador faça. Felizmente, para não precisamos repetir inúmeras vezes a invocação de uma função ou certo código, existe os loops (laços de repetição).</p>
+
+  <h3>FOR</h3>
+  <p>Formado por três partes: inicialização, condição e incremento. A sintaxe é:</p>
+<pre class="lang-javascript linenums prettyprint">
+for (var i = 0; i &lt;= 10; i++) {
+  //código a ser executado até a condição se tornar falsa
+}
+</pre>
+
+  <h3>FOR IN</h3>
+  <p>É utilizado quando não sabemos quantas vezes temos que interar sobre um array ou objeto.</p>
+<pre class="lang-javascript linenums prettyprint">
+var arr = [1,2,3];
+for(var n in arr) {
+  console.log(n);
+}
+</pre>
+
+  <h3>FOREACH</h3>
+  <p>Utilizamos o <code>foreach</code> quando queremos percorrer as propriedades de um objeto ou os itens de um array, sem precisamos nos preocupar em contar quantos são.</p>
+<pre class="lang-javascript linenums prettyprint">
+var arr = [1,2,3];
+arr.forEach(function(each){
+  console.log(each);
+});
+</pre>
+
+  <h3>WHILE</h3>
+  <p>Funciona basicamente igual ao for, e é possível sempre trocar o for() por um while(). Escolhemos um ou outro pela clareza do que estamos fazendo. Geralmente preferimos utilizar o loop for() para interar com contadores e loops while() até que alguma condição mude (de true para false, por exemplo).</p>
+<pre class="lang-javascript linenums prettyprint">
+var x = true;
+while(x) {
+  console.log('Jane Doe');
+  x = false;
+}
+</pre>
+
+  <p>Nesse caso acima, o console.log será executado uma única vez, pois eu altero para false a variavel x, logo na primeira interação do laço. Mas eu poderia ter feito algo assim:</p>
+<pre class="lang-javascript linenums prettyprint">
+var i = 1,
+    x = 2;
+
+while(x &lt; 20) {
+  x = x + (x * i);
+
+  console.log('O valor atual de x é: ' + x);
+  i++;
+}
+</pre>
+
+  <h3>DO WHILE</h3>
+  <p>Segue o mesmo princípio do while, mas o corpo é sempre executado pelo menos uma vez, independente da condição, pois primeiro ele faz <b>do</b> e depois testa a condição.</p>
+<pre class="lang-javascript linenums prettyprint">
+do {
+  console.log('Jane Doe');
+} while(false);
+</pre>
+  <p>Apesar da condição já começar como falsa, veremos a string "Jane Doe" uma vez no console do browser.</p>
+
+</article>
