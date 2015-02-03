@@ -8,19 +8,19 @@ title: Funções
   <h1>Funções</h1>
   <h2>Criando e usando funções personalizadas</h2>
 
-  <p>Inicialmente, pense em funções como caixinhas mágicas: você joga coisas dentro, algo acontece e você recebe de volta uma transformação do que foi colocado, por exemplo, imagine uma caixinha em que você coloca dois números: 3 e 5 e a caixa te devolve 8.</p>
+  <p>Inicialmente, pense em funções como caixinhas mágicas: você joga coisas dentro, algo acontece e você recebe de volta uma transformação do que foi colocado. Por exemplo: imagine uma caixinha em que você coloca dois números: 3 e 5 e a caixa te devolve 8.</p>
 
   <p>Os números 3 e 5 que colocamos dentro da caixa iremos chamar de <b>argumentos</b> e o 8 que recebemos, iremos chamar de <b>retorno</b>.</p>
 
   <p>Nem sempre uma função terá argumentos e nem sempre terá um retorno, mas certamente ela irá realizar alguma coisa de nosso interesse, seja mudar a cor de algum elemento, abrir uma janela popup, ou qualquer uma das outras coisas que a linguagem JavaScript pode fazer.</p>
 
-  <p>As linguagens de programação já possuem algumas funções pré-definidas para nos ajudar. Da linguagem javascript podemos citar: <code>open()</code>(usada para abrir janelas popup), <code>parseInt()</code> (usada para converter um número ou string em inteiro), <code>encodeURI()</code> (codifica uma cadeia de caracteres em um uri válido)... </p>
+  <p>As linguagens de programação já possuem algumas funções pré-definidas para nos ajudar. Da linguagem JavaScript podemos citar: <code>open()</code>(usada para abrir janelas popup), <code>parseInt()</code> (usada para converter um número ou string em inteiro), <code>encodeURI()</code> (codifica uma cadeia de caracteres em um URI válido)... </p>
 
   <h2>Resolvendo problemas</h2>
 
-  <p>Sempre que estivermos programando em qualquer linguagem, temos que ter em mente uma coisa muito importante: <em>"o melhor jeito de resolver um problema grande é dividi-lo em probleminhas menores"</em>, cada um desses "probleminhas menores" serão resolvidos por funções pequenas, assim juntando as várias pequenas funções, teremos resolvido "o todo".</p>
+  <p>Sempre que estivermos programando em qualquer linguagem, temos que ter em mente uma coisa muito importante: <em>"o melhor jeito de resolver um problema grande é dividi-lo em problemas menores"</em>, cada um desses "problemas menores" serão resolvidos por funções pequenas, assim juntando as várias pequenas funções, teremos resolvido "o todo".</p>
 
-  <p>Apesar de ser possível escrever todo o código que resolve o problema grande numa única função gigante, não fazemos isso. Pois isso tornaria muito complexo nosso código, dificultaria uma futura manutenção e impossibilitaria o reaproveitamento de pequenas rotinas.</p>
+  <p>Apesar de ser possível escrever todo o código que resolve o problema grande numa única função gigante, não fazemos isso. Pois isso tornaria muito complexo nosso código, dificultaria uma futura manutenção e impossibilitaria o reaproveitamento de pequenas rotinas. Por isso preferimos dividir e depois criar uma função grande que utilize nossas outras funções pequenas, do que escrever tudo num só lugar.</p>
 
   <h2>Declarando</h2>
 
@@ -36,7 +36,7 @@ function foo() {
 
   <h2>Invocando</h2>
 
-  <p>Após construirmos a caixa, ela por si só não faz absolutamente nada, até a chamarmos. A invocação consiste em colocar o nome da função seguido pelos parênteses. Isso já faz com que o código dentro do corpo da nossa função seja executado.</p>
+  <p>Após construirmos a caixa, ela por si só não faz absolutamente nada até a chamarmos. A invocação consiste em colocar o nome da função seguido pelos parênteses. Isso faz com que o código dentro do corpo da nossa função seja executado.</p>
 <pre class="lang-javascript linenums prettyprint">
 foo();
 </pre>
