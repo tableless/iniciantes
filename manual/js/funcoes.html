@@ -7,5 +7,68 @@ title: Funções
 <article class="content">
   <h1>Funções</h1>
   <h2>Criando e usando funções personalizadas</h2>
-  <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+
+  <p>Inicialmente, pense em funções como caixinhas mágicas: você joga coisas dentro, algo acontece e você recebe de volta uma transformação do que foi colocado, por exemplo, imagine uma caixinha em que você coloca dois números: 3 e 5 e a caixa te devolve 8.</p>
+
+  <p>Os números 3 e 5 que colocamos dentro da caixa iremos chamar de <b>argumentos</b> e o 8 que recebemos, iremos chamar de <b>retorno</b>.</p>
+
+  <p>Nem sempre uma função terá argumentos e nem sempre terá um retorno, mas certamente ela irá realizar alguma coisa de nosso interesse, seja mudar a cor de algum elemento, abrir uma janela popup, ou qualquer uma das outras coisas que a linguagem JavaScript pode fazer.</p>
+
+  <p>As linguagens de programação já possuem algumas funções pré-definidas para nos ajudar. Da linguagem javascript podemos citar: <code>open()</code>(usada para abrir janelas popup), <code>parseInt()</code> (usada para converter um número ou string em inteiro), <code>encodeURI()</code> (codifica uma cadeia de caracteres em um uri válido)... </p>
+
+  <h2>Resolvendo problemas</h2>
+
+  <p>Sempre que formos programar em qualquer linguagem, temos que ter em mente uma coisa muito importante: <em>"o melhor jeito de resolver um problema grande é dividir esse problema em probleminhas menores"</em>, cada um desses "probleminhas menores" serão tratados por funções nossas assim, juntando as várias pequenas funções, teremos resolvido "o todo".</p>
+
+  <p>Apesar de ser possível escrever todo o código que resolve o problema grande numa única função gigante, isso tornaria muito complexo nosso código, dificultaria uma futura manutenção e impossibilitaria o reaproveitamento de pequenas rotinas. Por isso que preferimos dividir e depois criar uma função grande que utilize nossas outras funções pequenas, do que escrever tudo num só lugar.</p>
+
+  <h2>Declarando</h2>
+
+  <p>A declaração de uma função é quando construimos a caixa mágica.</p>
+
+<pre class="lang-javascript linenums prettyprint">
+function foo() {
+  //corpo
+}
+</pre>
+
+  <p><code>foo</code> é o nome da função e o código entre as chaves {}, é o corpo da nossa função. A palavra <code>function</code> é a forma da linguagem JavaScript indicar que estamos <b>declarando</b> uma função (criando a caixa mágica).</p>
+
+  <h2>Invocando</h2>
+
+  <p>Após construirmos a caixa, ela por si só não faz absolutamente nada, até a chamarmos. A invocação consiste em colocar o nome da função seguido pelos parênteses. Isso já faz com que o código dentro do corpo da nossa função seja executado.</p>
+<pre class="lang-javascript linenums prettyprint">
+foo();
+</pre>
+
+  <p>Experimente declarar salvar um arquivo .html e abrir com o seu navegador, contendo o seguinte código:</p>
+<pre class="lang-html linenums prettyprint">
+&lt;script>
+function bar() {
+  alert('Hello World');
+}
+&lt;/script>
+</pre>
+  <p>Após abrir o arquivo com qualquer navegador, você irá notar que não irá acontecer absolutamente nada. Sim, nada. Pois ainda não <b>invocamos</b> a função. Apenas a <b>declaramos</b>. Para invocar, o arquivo ficaria com o seguinte conteúdo:</p>
+
+<pre class="lang-html linenums prettyprint">
+&lt;script>
+// declarando
+function bar() {
+  alert('Hello World');
+}
+
+// invocando
+bar();
+&lt;/script>
+</pre>
+
+  <h2>Exemplo de função com argumentos e retorno</h2>
+
+  <p>Lembram que eu iniciei o texto falando de uma caixa mágica que recebia 2 números e devolvia a soma deles ? Essa função ficaria assim:</p>
+<pre class="lang-javascript linenums prettyprint">
+function somar(x, y) {
+  return x + y;
+}
+</pre>
 </article>
