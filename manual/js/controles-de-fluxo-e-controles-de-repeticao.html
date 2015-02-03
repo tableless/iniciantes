@@ -1,14 +1,14 @@
 ---
 layout: interna
-title: Estruturas de Controle e Laços
+title: Controles de Fluxo e Controles de Repetição
 ---
 {% include submenu-js.html %}
 
 <article class="content">
   <h1>Declarações (Statements)</h1>
-  <h2>Entendendo declarações condicionais e laços de repetição</h2>
+  <h2>Entendendo Controles de Fluxo e Controles de Repetição</h2>
 
-  <h2>Controle de Fluxo</h2>
+  <h2>Controles de Fluxo</h2>
   <p>São comandos da linguagem que permitem desviar o fluxo do programa, dependendo de um teste.</p>
 
   <h3>IF</h3>
@@ -19,7 +19,7 @@ if (&lt;teste>) {
 }
 </pre>
 
-  <p>Podemos por exemplo, executar um trecho do código, unicamente se uma variavel nossa for maior do que dez.</p>
+  <p>Podemos, por exemplo, executar um trecho do código unicamente se uma variavel nossa for maior do que dez.</p>
 <pre class="lang-javascript linenums prettyprint">
 var x = 11;
 if (x > 10) {
@@ -37,7 +37,7 @@ console.log('Serei executado independente do if ser true ou false');
 </pre>
 
   <h3>ELSE</h3>
-  <p>o else é a contraparte do if. Não existe sem o if, pois ele não testa nada. Só é executado caso o teste do if retorne falso.</p>
+  <p>o else não existe sem o if, pois ele não testa nada. Só é executado caso o teste do if retorne falso.</p>
 <pre class="lang-javascript linenums prettyprint">
 var x = 9;
 if (x > 10) {
@@ -67,7 +67,7 @@ switch (tinta) {
 }
 </pre>
 
-  <p>Note que para cada uma das cores eu farei uma coisa completamente diferente da outra. Caso a tinta seja verde, eu vou pintar o chão da garagem, mas se a tinha for amarela, irei pintar a casa.</p>
+  <p>Note que para cada uma das cores, eu farei uma coisa completamente diferente da outra. Caso a tinta seja verde, eu vou pintar o chão da garagem, mas se a tinha for amarela, irei pintar a casa.</p>
 
   <p>Se fossemos reescrever esses testes com elseif, ficaria assim:</p>
 <pre class="lang-javascript linenums prettyprint">
@@ -86,7 +86,7 @@ if (tinta === 'azul') {
   <p>Fica melhor com o switch, ne?!</p>
 
   <h2>Laços de repetição (loops)</h2>
-  <p>Se existe uma coisa que os computadores são muito bons é em executar uma coisa várias vezes. Desde que saibamos o que queremos que o computador faça. Felizmente, para não precisamos repetir inúmeras vezes a invocação de uma função ou certo código, existe os loops (laços de repetição).</p>
+  <p>Se existe uma coisa que os computadores são muito bons é em executar algo várias vezes. Desde que saibamos o que queremos que o computador faça. Felizmente, para não precisamos repetir inúmeras vezes a invocação de uma função ou certo código, existe os loops (laços de repetição).</p>
 
   <h3>FOR</h3>
   <p>Formado por três partes: inicialização, condição e incremento. A sintaxe é:</p>
