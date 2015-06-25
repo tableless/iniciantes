@@ -7,5 +7,171 @@ title: Propriedade Font
 <article class="content">
   <h1>Propriedade Font</h1>
   <h2>Formatando fonts de texto</h2>
-  <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
+  <p>As propriedades font definem as características, das lestras em textos, titulos, etc.. </p>
+	<h3>Propriedades basicas para fontes</h3>
+	<ul>
+		<li><i>font-size: </i><b>tamanho da fonte</b></li>
+		<li><i>font-style: </i><b>estilo de fonte</b></li>
+		<li><i>font-weight: </i><b>quanto mais escura a fonte é, tipo negrito</b></li>
+		<li><i>font-family: </i><b>tipo de fonte</b></li>
+		<li><i>font: </i><b>define todas as propriedades de fonte em uma declaração</b></li>
+		<li><i>color: </i><b>define a cor da fonte</b></li>
+		<li><i>font-variant: </i><b>fontes maiúsculas de menor altura</b></li>
+	</ul>
+
+	<h3>Exemplos</h3>
+	<dl>
+		<dt>font-size</dt>
+		<dd>
+			<p>A propriedade font-size define o tamanho do texto, esse tamanho pode ser definido, com pixels.</p>
+			
+<pre class="lang-css prettyprint linenums">
+p {
+  font-size: 20px;
+}
+</pre>
+
+		<p>irá renderizar:</p>
+		<p style="font-size:20px;">Sou um &lt;p&gt; com 20px de tamanho </p>
+
+		<br>
+
+  	<p>Pode ser definido por em</p>
+
+<pre class="lang-css prettyprint linenums">
+p {
+  font-size: 1.5em;
+}
+</pre>
+
+		<p>irá renderizar:</p> 
+		<p style="font-size:1.5em;">Sou um &lt;p&gt; com 1.5em de tamanho </p>
+
+		<br>
+
+  	<p>Por porcentagem</p>
+
+<pre class="lang-css prettyprint linenums">
+p {
+  font-size: 100%;
+}
+</pre>
+
+		<p>irá renderizar:</p> 
+		<p style="font-size:100%;">Sou um &lt;p&gt; com 100% de tamanho </p>
+		
+		<br>
+
+		<p>Por letras</p>
+
+<pre class="lang-css prettyprint linenums">
+p {
+  font-size: smaller;
+}
+</pre>
+
+		<p>irá renderizar:</p> 
+		<p style="font-size:smaller;">Sou um &lt;p&gt; com <i>smaller</i> de tamanho </p>
+
+		</dd>
+
+
+		<dt>font-style</dt>
+		<dd>
+			<p><i>font-style</i> define o tipo da fonte: italic, normal, oblique.</p>
+
+<pre class="lang-css prettyprint linenums">
+h1 {
+  font-style: italic;
+}
+</pre>
+
+		<p>irá renderizar:</p> 
+		<h1 style="font-style:italic;">Sou um &lt;h1&gt; com <i>italic</i> de estilo </h1>
+
+<pre class="lang-css prettyprint linenums">
+h2 {
+  font-style: normal;
+}
+</pre>
+
+		<p>irá renderizar:</p> 
+		<h2 style="font-style:normal;">Sou um &lt;h2&gt; com <i>normal</i> de estilo </h2>
+
+<pre class="lang-css prettyprint linenums">
+p {
+  font-style: oblique;
+}
+</pre>
+
+		<p>irá renderizar:</p> 
+		<p style="font-style:oblique;">Sou um &lt;p&gt; com <i>oblique</i> de estilo </p>
+		</dd>
+
+		<dt>Font-weight</dt>
+		<dd>
+			<p>A propriedade <i>font-weight define a espessura da fonte</i></p>
+<pre class="lang-css prettyprint linenums">
+p {
+  font-weight: bold; //deixará a fonte grossa
+  font-weight: normal; //deixará a fonte como o própio nome já diz normal (padrão)
+  font-weight: 900; //deixará a fonte de acordo com o numero 100 ... 900
+}
+</pre>
+		</dd>
+
+		<dt>font-family</dt>
+
+		<dd>
+			<p>A propriedade font-family é usada para definir uma lista de tipos de fontes.</p>
+
+			<p>O browser assume o primeiro nome que ele reconhece na lista.</p>
+
+<pre class="lang-css prettyprint linenums">
+h2 {
+  font-family: arial, helvetica, serif;
+}
+</pre>
+
+		<p>irá renderizar:</p> 
+		<h2 style="font-family: arial, helvetica, serif;">Sou um &lt;h2&gt; com estilo de familia definido </h2>
+
+		</dd>
+
+		<dt>font</dt>
+
+			<dd>
+			
+			<p>Especifique todas as propriedades de fonte em uma declaração</p>
+
+<pre class="lang-css prettyprint linenums">
+p {
+  font: italic bold 12px Georgia, serif;
+}
+</pre>
+
+		<p>irá renderizar:</p> 
+		<p style="font: italic bold 12px Georgia, serif;">Sou um &lt;p&gt; com apenas <i>font</i> declarado, e varias propriedades declaradas </p>
+		
+		</dd>
+
+		<dt>font-variant</dt>
+
+		<dd>
+			
+			<p>fontes maiúsculas "menores"</p>
+
+<pre class="lang-css prettyprint linenums">
+p.small {
+    font-variant: small-caps;
+}
+</pre>
+		
+			<p>irá renderizar:</p> 
+			<p style="font-variant: small-caps;">Sou um &lt;p&gt; com <i>small-caps</i> </p>
+		</dd>
+
+	</dl>
+
 </article>
+                                    
