@@ -1,76 +1,79 @@
 .lnk-fork {
-  display: none;
+    display: none;
 }
 
 .limit {
-  width: 90%;
-  margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .box {
-  display: block;
-  width: 100%;
-  margin: 0 auto 20px;
+    display: block;
+    width: 100%;
+    margin: 0 auto 20px;
 }
-.box:nth-child(even) {margin: 0 auto 20px;}
+
+.box:nth-child(even) {
+    margin: 0 auto 20px;
+}
 
 .box:before {
-  padding: 20px 0;
-  font-size: 2em;
+    padding: 20px 0;
+    font-size: 2em;
 }
 
 .box h1 {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 .box p {
-  padding: 10px 10px 7px;
-  line-height: 20px;
-  font-size: 1em;
+    padding: 10px 10px 7px;
+    line-height: 20px;
+    font-size: 1em;
 }
-
 
 /*****
 ****** SIDEBAR
 *****/
 .sidebar {
-  float: none;
-  margin-right: 20px;
-  position: relative;
-  top: -70px;
+    float: none;
+    margin-right: 20px;
+    position: relative;
+    top: -70px;
 }
 
 .navside {
-  margin-right: 0;
-  margin-bottom: 20px;
-  float: none;
-  clear: left;
-  width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    float: none;
+    clear: left;
+    width: 100%;
 }
 
-
-
-.navside ul {position: absolute; top: -1000px}
+.navside ul {
+    position: absolute;
+    top: -1000px
+}
 
 .navside:target ul {
-  position: relative;
-  top: 0;
+    position: relative;
+    top: 0;
 }
 
 .navside h3:before {
-  display: inline-block;
-  content: " ";
-  position: absolute;
-  right: 15px;
-  top: 20px;
-  width: 10px;
-  height: 5px;
-  background: url(../img/arrow-menu.png) no-repeat center;
-  background-size: 100%;
-  -webkit-transform: rotate(-90deg);
+    display: inline-block;
+    content: " ";
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    width: 10px;
+    height: 5px;
+    background: url(../img/arrow-menu.png) no-repeat center;
+    background-size: 100%;
+    -webkit-transform: rotate(-90deg);
 }
 
 .navside:target h3:before {
-  background: url(../img/arrow-menu.png) no-repeat center;
-  -webkit-transform: rotate(0deg);
+    background: url(../img/arrow-menu.png) no-repeat center;
+    -webkit-transform: rotate(0deg);
 }
