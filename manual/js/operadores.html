@@ -59,6 +59,69 @@ x-- //1
   	</dd>
   </dl>
   <h2>De comparaçao</h2>
+  <dl>
+  	<dt>Igual (==)</dt>
+  	<dd>Retorna verdadeiro se os valores comparados forem iguais.
+		<pre class="lang-javascript prettyprint linenums">
+1=='1' //true
+		</pre>
+  	</dd>
+  	<dt>Não igual (!=)</dt>
+  	<dd>Retorna verdadeiro se os valores comparados não forem iguais. Esse operador também pode ser chamado de diferente de.
+		<pre class="lang-javascript prettyprint linenums">
+4!=1 //true
+		</pre>
+  	</dd>
+  	<dt>Igual estrito (===)</dt>
+  	<dd>Esse operador é mais severo, só retorna verdadeiro se o valor e o tipo comparados forem iguais.
+		<pre class="lang-javascript prettyprint linenums">
+3=='3' //false
+3==3 //true
+		</pre>
+  	</dd>
+  	<dt>Não igual estrito (!==)</dt>
+  	<dd>Não se engane, esse operador vai retornar verdadeiro se os valores e ou os tipos forem diferentes
+		<pre class="lang-javascript prettyprint linenums">
+3!=='3' //true
+3!==3 //false
+3!==4 //true
+		</pre>
+  	</dd>
+    <dt>Maior que (>)</dt>
+    <dd>Compara se o operador da esquerda é maior que o da direita. Caso seja retorna verdadeiro
+    <pre class="lang-javascript prettyprint linenums">
+1>2 //false
+5>3 //true
+4>'1' //true
+    </pre>
+    <dt>Maior ou igual que (>=)</dt>
+    <dd>Compara se o operador da esquerda é maior ou igual ao da direita. Caso seja retorna verdadeiro
+    <pre class="lang-javascript prettyprint linenums">
+1>=2 //false
+5>=3 //true
+4>='1' //true
+2>=2 // true
+    </pre>
+    </dd>
+    <dt>Menor que (<)</dt>
+    <dd>Compara se o operador da esquerda é menor que o da direita. Caso seja retorna verdadeiro
+    <pre class="lang-javascript prettyprint linenums">
+1<2 //true
+5<3 //false
+4<'1' //false
+    </pre>
+    </dd>
+    <dt>Menor ou igual que (<=)</dt>
+    <dd>Compara se o operador da esquerda é menor ou igual ao da direita. Caso seja retorna verdadeiro
+    <pre class="lang-javascript prettyprint linenums">
+1<=2 //true
+5<=3 //false
+4<='1' //false
+2<=2 // true
+    </pre>
+    </dd>
+  </dl>
+
   <h2>Lógicos</h2>
 
   <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
