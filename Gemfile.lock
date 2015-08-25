@@ -9,6 +9,7 @@ GEM
     commander (4.1.6)
       highline (~> 1.6.11)
     fast-stemmer (1.0.2)
+    ffi (1.9.3)
     ffi (1.9.3-x64-mingw32)
     github-pages (15)
       RedCloth (= 4.2.9)
@@ -56,7 +57,11 @@ GEM
     yajl-ruby (1.1.0)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
   github-pages
+
+BUNDLED WITH
+   1.10.6
