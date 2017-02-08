@@ -79,18 +79,27 @@ console.log(gaveteiro.length); //9
 </pre>
 <pre>
   <h5>Brincando com splice!</h5>
-      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    <p>O método splice() consegue adicionar e remover itens ao mesmo tempo.</p>
+    
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
     fruits.splice(2, 0, "Lemon", "Kiwi");
     Banana,Orange,Lemon,Kiwi,Apple,Mango
+    
+    //Neste exemplo acima, o número 2 indica a posição que será alterada(inclusão/remoçaõ) e o número 0 significa quantos itens serão removidos a partir desta posição !
+    //As frutas Lemon e Kiwi foram adicionadas na posição 2 e a fruta 'Apple' passa a ocupar agora a posição 4.
 
 
     var fruits = ["Banana", "Orange", "Apple", "Mango"];
     fruits.splice(2, 1, "Lemon", "Kiwi");
     Banana,Orange,Lemon,Kiwi,Mango
+    
+    //Neste exemplo acima, na posição 2, 1 item foi removido("Apple") e os itens "Lemon","Kiwi" foram adicionados.
 
 
     var fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
     fruits.splice(2, 2);
     Banana,Orange,Kiwi
+    
+    //Neste exemplo acima, não foram especificados itens a serem adicionados. Entretanto, na posição 2 está indicado a remoção de 2 itens. Assim, a fruta "Apple" foi excluída e a fruta "Mango" também que é a próxima.
 </pre>
 </article>
