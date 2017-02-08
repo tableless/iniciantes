@@ -77,4 +77,20 @@ console.log(gaveteiro.length); //10
 gaveteiro.push(200);
 console.log(gaveteiro.length); //9
 </pre>
+<pre>
+  <h5>Brincando com splice!</h5>
+      var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.splice(2, 0, "Lemon", "Kiwi");
+    Banana,Orange,Lemon,Kiwi,Apple,Mango
+
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.splice(2, 1, "Lemon", "Kiwi");
+    Banana,Orange,Lemon,Kiwi,Mango
+
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+    fruits.splice(2, 2);
+    Banana,Orange,Kiwi
+</pre>
 </article>
