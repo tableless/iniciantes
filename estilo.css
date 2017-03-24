@@ -1,0 +1,27 @@
+*{
+	font-family: sans-serif;
+}
+body{
+	margin: 0;
+	background: #3a5795;
+}
+.container{
+	margin: 0 10%;
+}
+section{
+	background: #D6D7FF;
+	padding: 5px;
+}
+.box{
+  background: #D6D7FF;
+  padding: 5px 0;
+  border-top: 1px solid #eee;
+}
+.box a{
+	text-decoration: none;
+	font-style: italic;
+	color: #008FE6;
+}
+.box a:hover{
+	color: #70C9FF;
+}
