@@ -7,5 +7,25 @@ title: Propriedade Font
 <article class="content">
   <h1>Propriedade Font</h1>
   <h2>Formatando fonts de texto</h2>
+  <p>A font trata das caracteristicas de todos os textos do site. Ela pode ser aplicada diretamente ao elemento <i>body</i> e por consequência todos os elementos filhos herdarão esta propriedade.</p>
+  <p>As propriedades da font são:</p>
+  <dl>
+    <dt>family</dt>
+    <dd>
+      <p>Determina a familia da font a ser usada. Existem dois tipos básicos: as <b>famílias</b> e as <b>famílias genéricas</b></p>
+      <p>As famílias genéricas podem ser três:</p>
+      <ul>
+        <li><b>serif</b>: Font com serifa.</li>
+        <li><b>sans-serif</b>: Font sem serifa.</li>
+        <li><b>monoespace</b>: Font com a mesma largura em todos os caracteres.</li>
+      </ul>
+      <p><i>Serifa</i> nada mais é do que aquelas pontinhas que tem em algumas fontes tipo Times, ou seja, Times é uma font com serifa e Arial é uma font sem serifa.</p>
+      <pre class="lang-css prettyprint linenums">
+      div {
+        font-family: "Times New Roman", Times, serif;;
+      }
+      </pre>
+      <p>Entre aspas vai o nome da font, seguido da familia (Times) e depois da família genérica (serif).</p>
+    </dd>
   <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
 </article>

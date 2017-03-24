@@ -7,5 +7,19 @@ title: O que é DOM?
 <article class="content">
   <h1>O que é DOM?</h1>
   <h2>A árvore de elementos do HTML.</h2>
+  <p>Sigla para Document Object Model, o DOM é a interface entre a linguagem Javascript e os objetos do HTML. </p>
+  <p>O DOM foi criado pela <a href="http://tableless.github.io/iniciantes/manual/obasico/oquew3c.html" target="_blank">W3C</a> com o objetivo de desenvolver um padrão para linguagens de script para os navegadores já que antigamente cada navegador tinha seu próprio modo de manipular os objetos, o que gerava muita incompatibilidade e obrigava os desenvolvedores a escrever uma versão de script para cada navegador.</p>
+  <p>Quando uma página web é carregada o navegador cria o DOM, a árvore de elementos do HTML.</p>
+  <p><img src="../../assets/img/arvore-dom.gif" alt="Imagem demonstrando a árvore de elementos criada"></p>
+  <h3>Entendendo a árvore</h3>
+  <h4>Document</h4>
+  <p>Quando um documento HTML é carregado no navegador da Web, torna-se um objeto de documento. O objeto de documento é o nó raiz do documento HTML e o "dono" de todos os outros nós.</p>
+  <h4>Element</h4>
+  <p>O objeto de elemento representa todas as tags que estão em arquivos HTML ou XML. Os objetos de elemento pode ter nós filhos de nós de texto, além de atributos. </p>
+  <h4>Text</h4>
+  <p>Texto que vai entre os elementos, o conteúdo das tags (&lt;p&gt;este é um texto&lt;/p&gt;).</p>
+  <h4>Attribute</h4>
+  <p>O objeto atributo representa um atributo que pertence sempre a um elemento HTML.</p>
+  <p>Através da estrutura criada, é possível, adicionar, alterar e remover elementos e atributos da árvore DOM utilizando JavaScript.</p>
   <p>Esta página está em construção. Volte em breve ou <a href="https://github.com/tableless/iniciantes">ajude a completá-la</a>!</p>
 </article>
