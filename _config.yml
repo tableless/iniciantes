@@ -10,7 +10,7 @@ timezone:    nil
 future:      true
 show_drafts: nil
 limit_posts: 0
-highlighter: pygments
+highlighter: rouge
 
 permalink:     date
 paginate_path: 'page:num'
